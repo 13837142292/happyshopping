@@ -15,8 +15,10 @@
                 <span>{{item.size}}</span>
                 <div class="pri">
                    <p>{{item.price}}</p>
-                   <div>
-
+                   <div class="num">
+                     <p>-</p>
+                     <p>1</p>
+                     <p>+</p>
                    </div>
                    
                 </div>
@@ -117,6 +119,11 @@ export default {
               font-size: 14px;
               font-weight: 800;
               margin-top: 5px;
+              }
+              .num{
+                  width: 86px;
+                  height: 28px;
+                  border: 1px solid gray;
               }
               }
           }
