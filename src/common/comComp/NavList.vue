@@ -4,7 +4,7 @@
       <i class="iconfont icon-tianchongxing-"></i>
       首页
     </router-link>
-    <router-link tag="li" to="/classifySortssss">
+    <router-link tag="li" to="/classifySortaaaa">
       <i class="iconfont icon-fenlei"></i>
       分类
     </router-link>
