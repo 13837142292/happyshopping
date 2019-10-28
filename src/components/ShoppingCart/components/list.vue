@@ -16,9 +16,9 @@
                 <div class="pri">
                    <p>{{item.price}}</p>
                    <div class="num">
-                     <p>-</p>
-                     <p>1</p>
-                     <p>+</p>
+                     <p @click="sub">-</p>
+                     <p>{{count}}</p>
+                     <p @click="add">+</p>
                    </div>
                    
                 </div>
@@ -43,14 +43,26 @@
 
 <script>
 import {getshoppingCart}  from "@/api"
+import {mapState,mapActions} from "vuex"
 export default {
     data(){
         return{
             productList:[]
         }
     },
+    computed:{
+           ...mapState([
+             'count'
+        ])
+    },
    async created(){
         this.productList=await getshoppingCart();
+    },
+    methods:{
+          ...mapActions([
+             'add',
+             'sub'
+        ])
     }
 }
 </script>
@@ -121,9 +133,24 @@ export default {
               margin-top: 5px;
               }
               .num{
-                  width: 86px;
+                  width: 87px;
                   height: 28px;
-                  border: 1px solid gray;
+                  border: 1px solid rgb(199, 196, 196);
+                  float: right;
+                  border-radius: 5px;  
+                  
+                  p{
+                      width: 28px;
+                      height: 28px;
+                      border-right: 1px solid rgb(199, 196, 196);
+                      margin-top: 0;
+                      margin-bottom: 0;
+                      text-align: center;
+                      color: gray;
+                  }
+                  p:nth-child(3){
+                         border-right:none;
+                  }
               }
               }
           }
