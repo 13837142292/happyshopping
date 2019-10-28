@@ -14,7 +14,7 @@
     </router-link>
     <router-link tag="li" to="/my">
       <i class="iconfont icon-xiazai"></i>
-      我的
+      我的2
     </router-link>
   </ul>
 </template>
