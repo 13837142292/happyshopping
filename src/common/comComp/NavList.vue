@@ -4,7 +4,7 @@
       <i class="iconfont icon-tianchongxing-"></i>
       首页
     </router-link>
-    <router-link tag="li" to="/classifySortaaaa">
+    <router-link tag="li" to="/classifySort">
       <i class="iconfont icon-fenlei"></i>
       分类
     </router-link>
@@ -14,7 +14,7 @@
     </router-link>
     <router-link tag="li" to="/my">
       <i class="iconfont icon-xiazai"></i>
-      我的2
+      我的
     </router-link>
   </ul>
 </template>
