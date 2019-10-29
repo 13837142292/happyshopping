@@ -20,7 +20,11 @@ export function getshoppingCart(){
 //classifySort
 //获取左侧列表
 export function getleftList(){
-  return axios.get("classifySort/leftList")
+  return  axios.get("classifySort/leftList")
+}
+//获取右侧列表
+export function getrightList(id){
+  return  axios.get("classifySort/rightList?id="+id)
 }
 
 
