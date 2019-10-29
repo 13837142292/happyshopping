@@ -11,6 +11,15 @@ axios.interceptors.response.use(function (response){
 },function(error){
   return Promise.reject(error);
 })
+// 首页获取轮播图
+export function getIndexBanner(){
+  return axios.get("banner");
+}
+//获取今日活动图
+export function getTodayList(){
+  return axios.get('activity');
+}
+
 
 //获取banner图
 export function getshoppingCart(){
