@@ -23,6 +23,7 @@ export default {
 <style>
 html,body{
   height: 100%;
+  padding-bottom: 500px;
 }
 #app{
   height: 100%;

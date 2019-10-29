@@ -11,6 +11,15 @@ axios.interceptors.response.use(function (response){
 },function(error){
   return Promise.reject(error);
 })
+// 首页获取轮播图
+export function getIndexBanner(){
+  return axios.get("banner");
+}
+//获取今日活动图
+export function getTodayList(){
+  return axios.get('activity');
+}
+
 
 //获取购物车信息
 export function getshoppingCart(){
@@ -20,7 +29,11 @@ export function getshoppingCart(){
 //classifySort
 //获取左侧列表
 export function getleftList(){
-  return axios.get("classifySort/leftList")
+  return  axios.get("classifySort/leftList")
+}
+//获取右侧列表
+export function getrightList(id){
+  return  axios.get("classifySort/rightList?id="+id)
 }
 
 

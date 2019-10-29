@@ -1,9 +1,18 @@
 <template>
   <div class="top">
-    <input type="text" name id placeholder="搜索商品,品牌" />
+    <input type="text" name id placeholder="搜索商品,品牌" @click="tiao"/>
     <img src="../images/搜索.png" alt />
   </div>
 </template>
+<script>
+export default {
+  methods:{
+    tiao(){ 
+          this.$router.replace('/serch')
+    }
+  }
+}
+</script>
 <style scoped>
 .top {
   position: relative;
