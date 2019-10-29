@@ -9,7 +9,9 @@ import top from "./components/top"
 import kindList from "./components/kindlist"
 export default {
     data(){
-
+        return{
+            
+        }
     },
     components:{
         top,
