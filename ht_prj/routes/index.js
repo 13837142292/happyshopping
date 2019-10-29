@@ -107,7 +107,7 @@ router.get('/beautyMakeup', function(req, res, next) {
   res.send(arr);
 });
 // 养生厨房
-router.get('/beautyMakeup', function(req, res, next) {
+router.get('/kitchen', function(req, res, next) {
   var arr = [
       {
           img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/487/287987/1_main_287987_360.jpg",
@@ -143,7 +143,7 @@ router.get('/beautyMakeup', function(req, res, next) {
   res.send(arr);
 });
 // 电子电器
-router.get('/appliance', function(req, res, next) {
+router.get('/electronic', function(req, res, next) {
   var arr = [
       {
           img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/40/241040/1_main_3_360.jpg",
@@ -179,6 +179,88 @@ router.get('/appliance', function(req, res, next) {
       img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/17/288517/1_main_5_360.jpg",
       title:"雅格充插电大台灯冷暖光调色卧室家用护眼台灯T104",
       money:89
+    }
+  ]
+  res.send(arr);
+});
+// 服饰新鲜货
+router.get('/afresh', function(req, res, next) {
+  var arr = [
+      {
+          img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/193/284693/1_main_1_360.jpg",
+          title:"萨左拼色狐狸领中长款羽绒服",
+          money:398
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/47/286047/1_main_286047_360.jpg",
+        title:"红松树手工钉珠腰间抽绳刺绣大衣",
+        money:799
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/163/244163/1_p_06243806993347283_360.jpg",
+        title:"可莱克小香风粗花呢定制款长大衣",
+        money:190
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/191/284691/1_main_284691_360.jpg",
+        title:"迪欧达加拿大进口鹅绒女士大衣",
+        money:798
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/456/285456/1_main_1_360.jpg",
+      title:"萨佐简约时尚羊毛双面尼大衣",
+      money:498
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/112/288612/1_main_288612_360.jpg",
+      title:"萨佐温婉优雅亮钻仿貂绒大衣",
+      money:238
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/38/288538/1_main_11_360.jpg",
+      title:"箴美典雅切尔西牛皮女靴（加赠羊皮包*1件）",
+      money:299
+    }
+  ]
+  res.send(arr);
+});
+//美妆断货网
+router.get('/outStock', function(req, res, next) {
+  var arr = [
+      {
+          img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/128/282628/1_main_01_360.jpg",
+          title:"亚瑟蒂莉麦卢卡蜂蜜羊奶皂套组100g*12块",
+          money:298
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/296/285296/1_main_285296_360.jpg",
+        title:"韩国原装进口Vprove熨斗小橙瓶冻龄精华安瓶30ml*5瓶",
+        money:699
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/239/276239/1_main_276239_360.jpg",
+        title:"以色列进口涵佩即时抚纹霜 5ml*3只*3盒",
+        money:899
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/239/276239/1_main_276239_360.jpg",
+        title:"奥地利国宝STYX诗蒂克活力龙精油舒柔按摩乳50ml*5",
+        money:999
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/487/259487/1_main_259487_360.jpg",
+      title:"日本花印纳豆弹润眼霜30g*6支（原装进口）",
+      money:699
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/334/246334/1_main_246334a_360.jpg",
+      title:"美国雅诗兰黛 新款红石榴日晚霜2件套装（日霜50ml+晚霜50ml）",
+      money:798
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/74/244074/1_main_01_360.jpg",
+      title:"（跨境）xhekpon径纹霜40ml*2支",
+      money:198
     }
   ]
   res.send(arr);
