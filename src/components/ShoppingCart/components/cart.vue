@@ -18,7 +18,8 @@
                  <p>快乐商城购</p>
             </div>
         <div class="bottom">
-          <p>您差129元，即可免运费,  <a href="#">去凑单</a></p>
+          <p ref="tit">您差129元，即可免运费, </p> 
+          <a ref="tit2"  href="#">去凑单</a>
           <img src="../images/right.png" alt="">
         </div>
         </div>
@@ -27,9 +28,9 @@
                <div class="con">
                 <div class="left">
                     <!-- 每一个商品 -->
-                <div class="every" @click="selectOne(index)">
+                <div  class="every" @click="selectOne(index)">
                <img  class="every-one" src="../images/before.png" alt="">
-               <img   :class="{active:currentIndex===index}" class="every-two" src="../images/after.png" alt="">
+               <img   :class="{active:currentIndex==index}" class="every-two" src="../images/after.png" alt="">
                 </div>
               
                 </div>
@@ -68,7 +69,7 @@
      <div class="allPrice">
         <div class="choose">
             <img src="../images/before.png" alt="">
-            <img src="../images/after.png" alt="">
+            <img v-if="isShow" src="../images/after.png" alt="">
         </div>
         <p>全选</p>
         <!-- 编辑时显示 -->
@@ -102,7 +103,8 @@ export default {
             productList:[],
             isShow:false,
             currentIndex:null,
-            finish:false
+            finish:false,
+            every:false
             
         }
     },
@@ -120,13 +122,23 @@ export default {
              'add',
              'sub'
         ]),
+        //全选
         selectAll(){
         this.isShow=!this.isShow;
+        if(this.isShow==true){
+            this.$refs.tit.innerHTML='您已享受满129元包邮优惠, ';
+            this.$refs.tit2.innerHTML="再逛逛"
+        }else{
+             this.$refs.tit.innerHTML='您差129元，即可免运费,';
+             this.$refs.tit2.innerHTML="去凑单"
+        }
+        
+
         },
+        //选择某一个商品
         selectOne(index){
             this.currentIndex=index;
-        
-      
+          
             
         },
         // 计算总价
@@ -204,31 +216,24 @@ export default {
     width: 100%;
    height: 20px;
    position: relative;
+
    .select{
        width: 22px;
        height: 22px;
        position: absolute;
        left: 10px;
        top:2px;
-      //未选中
+
+      //头部全选
       img{
-      width: 100%;
+       width: 100%;
        height: 100%;
-      }
-  .all-one{
        position: absolute;
        left: 0;
-       top:0;
+       top:0; 
        display: block;
-   }
-   //选中
-   .all-two{
-     position: absolute;
-       left: 0;
-       top:0;
-       display: block;
-    
-   }
+      }
+  
  
    }
     .home{
@@ -247,20 +252,26 @@ export default {
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
+    border: 1px solid transparent;
     p{
       margin-left: 10%;
       font-size: 14px;
       color: #919191;
       float: left;
+   
+    } 
       a{
-          color: black;
+          width: 45px;
+          display: inline-block;
+          color: black !important;
+          float: left;
+          font-size: 14px;
+          
       }
-    }
     img{
         width:18px;
         height: 18px; 
-       margin-top: 2px;
-        
+        margin-top: 2px;
     }
 }  
 }
@@ -278,12 +289,14 @@ export default {
               height: 100%;
               position: relative;
               float: left;
+
               .every{
                   width: 22px;
                   height: 22px;
                   position: absolute;
                   left: 0;
                   top:30px;  
+                  //每个商品是否选中
                    img{
                   width: 22px;
                   height: 22px;
@@ -421,6 +434,7 @@ export default {
         float: left;
         margin-top: 20px;
         position: relative;
+        //底部全选
         img{
             width:22px;
             height: 22px;
@@ -429,9 +443,7 @@ export default {
             top: 0;
             display: block;
         }
-         img:nth-child(2){
-           opacity: 0;
-         }
+         
       
     } 
      p{
