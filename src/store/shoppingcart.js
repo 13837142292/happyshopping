@@ -4,7 +4,7 @@ Vue.use(Vuex);
 
 var store=new Vuex.Store({
     state:{
-        count:1
+     
     },
    mutations:{
        add:(state)=>{

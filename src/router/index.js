@@ -4,7 +4,12 @@ import Home from "../components/Home/home.vue"
 import ClassifySort from "../components/ClassifySort/classifySort.vue"
 import My from "../components/My/my.vue"
 import ShoppingCart from "../components/ShoppingCart/shoppingCart.vue"
+<<<<<<< HEAD
+import detail from "../components/ShoppingCart/components/detail-one.vue"
+
+=======
 import serch from "../components/ClassifySort/components/serch.vue"
+>>>>>>> 4515800fc72fccf1f052566e2509b4d8d26f0435
 Vue.use(VueRouter)
 
 let    routes=[
@@ -36,6 +41,10 @@ let    routes=[
         {
             path:'*',
             redirect:"/home"
+        },
+        {
+             path:'/detail-one',
+             component:detail
         }
         
     ]
