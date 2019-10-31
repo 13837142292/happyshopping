@@ -30,7 +30,7 @@
                     <!-- 每一个商品 -->
                 <div  class="every" @click="selectOne(index)">
                <img  class="every-one" src="../images/before.png" alt="">
-               <img   :class="{active:currentIndex==index}" class="every-two" src="../images/after.png" alt="">
+               <img  :class="{active:currentIndex==index}" class="every-two" src="../images/after.png" alt="">
                 </div>
               
                 </div>
