@@ -59,6 +59,14 @@ export function getleftList(){
 export function getrightList(id){
   return  axios.get("classifySort/rightList?id="+id)
 }
+//获取搜索列表
+export function getserchList(){
+  return  axios.get("classifySort/serchList")
+}
+//获取排序列表
+export function getsortList(con){
+  return  axios.get("classifySort/sortList?serchcon="+con)
+}
 
 
 

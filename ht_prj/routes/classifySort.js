@@ -351,81 +351,81 @@ router.get('/rightList', function (req, res, next) {
         ]
       },
       {
-        title:"休闲食品",
-        list:[
+        title: "休闲食品",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/55.png",
-            msg:"坚果/果干"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/55.png",
+            msg: "坚果/果干"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/56.png",
-            msg:"饼干糕点"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/56.png",
+            msg: "饼干糕点"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/57.png",
-            msg:"糖果/巧克力"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/57.png",
+            msg: "糖果/巧克力"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/58.png",
-            msg:"零食"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/58.png",
+            msg: "零食"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/59.png",
-            msg:"麻辣零食"
-          },
-        ]
-      },
-      {
-        title:"营养保健",
-        list:[
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/84.png",
-            msg:"红枣/枸杞"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/81.png",
-            msg:"女性保养"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/83.png",
-            msg:"阿胶/燕窝"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/86.png",
-            msg:"传统滋补"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/85.png",
-            msg:"基础保健"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/82.png",
-            msg:"瘦身/酵素"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/59.png",
+            msg: "麻辣零食"
           },
         ]
       },
       {
-        title:"生鲜食品",
-        list:[
+        title: "营养保健",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/78.png",
-            msg:"新鲜果蔬"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/84.png",
+            msg: "红枣/枸杞"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/79.png",
-            msg:"肉类"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/81.png",
+            msg: "女性保养"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/80.png",
-            msg:"家禽蛋类"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/83.png",
+            msg: "阿胶/燕窝"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class/1095/05596782259518399.jpg",
-            msg:"大闸蟹"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/86.png",
+            msg: "传统滋补"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class/1095/05612341740621245.jpg",
-            msg:"生鲜水产"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/85.png",
+            msg: "基础保健"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/82.png",
+            msg: "瘦身/酵素"
+          },
+        ]
+      },
+      {
+        title: "生鲜食品",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/78.png",
+            msg: "新鲜果蔬"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/79.png",
+            msg: "肉类"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/80.png",
+            msg: "家禽蛋类"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class/1095/05596782259518399.jpg",
+            msg: "大闸蟹"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class/1095/05612341740621245.jpg",
+            msg: "生鲜水产"
           },
         ]
       }
@@ -552,161 +552,161 @@ router.get('/rightList', function (req, res, next) {
         ]
       },
       {
-        title:"清洁收纳",
-        list:[
+        title: "清洁收纳",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/156.png",
-            msg:"清洁用品"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/156.png",
+            msg: "清洁用品"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/157.png",
-            msg:"收纳用品"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/157.png",
+            msg: "收纳用品"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/158.png",
-            msg:"晾晒置物"
-          },
-        ]
-      },
-      {
-        title:"厨房用具",
-        list:[
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/10.png",
-            msg:"刀"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/11.png",
-            msg:"砧板/托盘"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/11.png",
-            msg:"保鲜盒/罐"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/12.png",
-            msg:"米箱"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/158.png",
+            msg: "晾晒置物"
           },
         ]
       },
       {
-        title:"生活用品",
-        list:[
+        title: "厨房用具",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/150.png",
-            msg:"个人清洁"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/10.png",
+            msg: "刀"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/151.png",
-            msg:"厨房用品"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/11.png",
+            msg: "砧板/托盘"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/152.png",
-            msg:"日常用品"
-          },
-        ]
-      },
-      {
-        title:"餐饮用具",
-        list:[
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/1.png",
-            msg:"碗碟"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/11.png",
+            msg: "保鲜盒/罐"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/2.png",
-            msg:"筷勺/刀叉"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/4.png",
-            msg:"运动水杯"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/8.png",
-            msg:"保温杯壶"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/9.png",
-            msg:"焖烧罐"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/3.png",
-            msg:"凉水壶/马克杯"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/5.png",
-            msg:"玻璃杯"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/6.png",
-            msg:"红酒杯"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/7.png",
-            msg:"茶具/咖啡杯"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/12.png",
+            msg: "米箱"
           },
         ]
       },
       {
-        title:"家庭建材",
-        list:[
+        title: "生活用品",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/159.png",
-            msg:"照片灯具"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/150.png",
+            msg: "个人清洁"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/161.png",
-            msg:"卫浴用品"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/151.png",
+            msg: "厨房用品"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/202.png",
-            msg:"其他"
-          },
-        ]
-      },
-      {
-        title:"厨房配件",
-        list:[
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/18.png",
-            msg:"保温饭盒"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/13.png",
-            msg:"置物架"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/15.png",
-            msg:"冰箱收纳"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/14.png",
-            msg:"调料收纳"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/16.png",
-            msg:"厨房小工具"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/17.png",
-            msg:"厨房清洁"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/152.png",
+            msg: "日常用品"
           },
         ]
       },
       {
-        title:"户外休闲",
-        list:[
+        title: "餐饮用具",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/165.png",
-            msg:"伞具"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/1.png",
+            msg: "碗碟"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/166.png",
-            msg:"户外用品"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/2.png",
+            msg: "筷勺/刀叉"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/167.png",
-            msg:"背包"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/4.png",
+            msg: "运动水杯"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/8.png",
+            msg: "保温杯壶"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/9.png",
+            msg: "焖烧罐"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/3.png",
+            msg: "凉水壶/马克杯"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/5.png",
+            msg: "玻璃杯"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/6.png",
+            msg: "红酒杯"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/7.png",
+            msg: "茶具/咖啡杯"
+          },
+        ]
+      },
+      {
+        title: "家庭建材",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/159.png",
+            msg: "照片灯具"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/161.png",
+            msg: "卫浴用品"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/202.png",
+            msg: "其他"
+          },
+        ]
+      },
+      {
+        title: "厨房配件",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/18.png",
+            msg: "保温饭盒"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/13.png",
+            msg: "置物架"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/15.png",
+            msg: "冰箱收纳"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/14.png",
+            msg: "调料收纳"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/16.png",
+            msg: "厨房小工具"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/17.png",
+            msg: "厨房清洁"
+          },
+        ]
+      },
+      {
+        title: "户外休闲",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/165.png",
+            msg: "伞具"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/166.png",
+            msg: "户外用品"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/167.png",
+            msg: "背包"
           },
         ]
       }
@@ -790,83 +790,83 @@ router.get('/rightList', function (req, res, next) {
         ]
       },
       {
-        title:"箱包",
-        list:[
+        title: "箱包",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/185.png",
-            msg:"旅行箱"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/185.png",
+            msg: "旅行箱"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/186.png",
-            msg:"双肩包"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/186.png",
+            msg: "双肩包"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/187.png",
-            msg:"单肩包"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/187.png",
+            msg: "单肩包"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/188.png",
-            msg:"钱包"
-          },
-        ]
-      },
-      {
-        title:"眼镜配饰",
-        list:[
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/189.png",
-            msg:"眼镜"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/190.png",
-            msg:"配饰"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/201.png",
-            msg:"其他"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/188.png",
+            msg: "钱包"
           },
         ]
       },
       {
-        title:"运动/户外",
-        list:[
+        title: "眼镜配饰",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/179.png",
-            msg:"运动服饰"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/189.png",
+            msg: "眼镜"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/180.png",
-            msg:"泳衣"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/190.png",
+            msg: "配饰"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/178.png",
-            msg:"其他"
-          },
-        ]
-      },
-      {
-        title:"钟表",
-        list:[
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/53.png",
-            msg:"男表"
-          },
-          {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/54.png",
-            msg:"女表"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/201.png",
+            msg: "其他"
           },
         ]
       },
       {
-        title:"珠宝藏品",
-        list:[
+        title: "运动/户外",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/51.png",
-            msg:"珠宝饰品"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/179.png",
+            msg: "运动服饰"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/52.png",
-            msg:"投资收藏"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/180.png",
+            msg: "泳衣"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/178.png",
+            msg: "其他"
+          },
+        ]
+      },
+      {
+        title: "钟表",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/53.png",
+            msg: "男表"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/54.png",
+            msg: "女表"
+          },
+        ]
+      },
+      {
+        title: "珠宝藏品",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/51.png",
+            msg: "珠宝饰品"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/52.png",
+            msg: "投资收藏"
           }
         ]
       }
@@ -1054,138 +1054,371 @@ router.get('/rightList', function (req, res, next) {
   } else if (id == 8) {
     arr = [
       {
-        title:"汽配周边",
-        list:[
+        title: "汽配周边",
+        list: [
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/129.png",
-            msg:"行车记录"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/129.png",
+            msg: "行车记录"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/130.png",
-            msg:"手机吸盘"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/130.png",
+            msg: "手机吸盘"
           },
           {
-            img:"https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/131.png",
-            msg:"车载香水"
+            img: "https://ecimg.happigo.com/data/upload/shop/common/goods_class_sub/131.png",
+            msg: "车载香水"
           },
 
         ]
       }
     ]
   } else if (id == 9) {
-  arr=[
+    arr = [
+      {
+        title: "个护美妆",
+        list: [
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05134417343720876.jpg",
+            msg: "京城之霜"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05221798162552746.jpg",
+            msg: "兰芝"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05127512174986573.jpg",
+            msg: "御泥坊"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05971632446068369.jpg",
+            msg: "雅诗兰黛"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05515326926166662.jpg",
+            msg: "WHOO后"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05439537713883786.jpg",
+            msg: "吕"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05512054391361660.jpg",
+            msg: "韩后"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05515302238371228.jpg",
+            msg: "SK-II"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05755629141133584.jpg",
+            msg: "兰蔻"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05515424796975362.jpg",
+            msg: "诗蒂兰"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05440156373435330.jpg",
+            msg: "洛神诗"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05515352458209148.jpg",
+            msg: "森田"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05515454058718115.jpg",
+            msg: "玉兰油"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05651779227188151.jpg",
+            msg: "美迪惠尔"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05755631819223168.jpg",
+            msg: "资生堂"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05751344502596428.jpg",
+            msg: "雪花秀"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05507519001811274.jpg",
+            msg: "欧莱雅loreal"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05127407522960401.jpg",
+            msg: "韩束"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05715757343386179.jpg",
+            msg: "雅顿"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05705526583229428.jpg",
+            msg: "科颜氏"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05515333580138374.jpg",
+            msg: "迪奥"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05705525160590779.jpg",
+            msg: "蝶翠诗"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05715757588067357.jpg",
+            msg: "纪梵希"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05439502266591044.jpg",
+            msg: "蒂佳婷"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05860086978812949.jpg",
+            msg: "高姿"
+          },
+          {
+            img: "https://ecimg.happigo.com/data/upload/shop/brand/05883592877514354.jpg",
+            msg: "青彩"
+          },
+        ]
+      }
+    ]
+  }
+
+  res.send(arr);
+});
+//搜索页面
+router.get('/serchList', function (req, res, next) {
+  arr = [
     {
-      title:"个护美妆",
-      list:[
+      title: "热门搜索",
+      con: [
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05134417343720876.jpg",
-          msg:"京城之霜"
+          id: 1,
+          txt: "羽绒服"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05221798162552746.jpg",
-          msg:"兰芝"
+          id: 2,
+          txt: "大衣"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05127512174986573.jpg",
-          msg:"御泥坊"
+          id: 3,
+          txt: "洗发水"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05971632446068369.jpg",
-          msg:"雅诗兰黛"
+          id: 4,
+          txt: "蚕丝被"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05515326926166662.jpg",
-          msg:"WHOO后"
+          id: 5,
+          txt: "牛尔"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05439537713883786.jpg",
-          msg:"吕"
+          id: 6,
+          txt: "雅诗兰黛"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05512054391361660.jpg",
-          msg:"韩后"
+          id: 7,
+          txt: "眼霜"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05515302238371228.jpg",
-          msg:"SK-II"
+          id: 8,
+          txt: "面膜"
+        },
+      ]
+    },
+    {
+      title: "热门分类",
+      con: [
+        {
+          id: 1,
+          txt: "面膜"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05755629141133584.jpg",
-          msg:"兰蔻"
+          id: 2,
+          txt: "女性保养"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05515424796975362.jpg",
-          msg:"诗蒂兰"
+          id: 3,
+          txt: "牛奶/酸奶"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05440156373435330.jpg",
-          msg:"洛神诗"
+          id: 4,
+          txt: "新鲜果蔬"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05515352458209148.jpg",
-          msg:"森田"
+          id: 5,
+          txt: "炒锅/煎锅"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05515454058718115.jpg",
-          msg:"玉兰油"
+          id: 6,
+          txt: "清洁用品"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05651779227188151.jpg",
-          msg:"美迪惠尔"
+          id: 7,
+          txt: "羽绒/羊绒"
         },
         {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05755631819223168.jpg",
-          msg:"资生堂"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05751344502596428.jpg",
-          msg:"雪花秀"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05507519001811274.jpg",
-          msg:"欧莱雅loreal"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05127407522960401.jpg",
-          msg:"韩束"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05715757343386179.jpg",
-          msg:"雅顿"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05705526583229428.jpg",
-          msg:"科颜氏"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05515333580138374.jpg",
-          msg:"迪奥"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05705525160590779.jpg",
-          msg:"蝶翠诗"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05715757588067357.jpg",
-          msg:"纪梵希"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05439502266591044.jpg",
-          msg:"蒂佳婷"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05860086978812949.jpg",
-          msg:"高姿"
-        },
-        {
-          img:"https://ecimg.happigo.com/data/upload/shop/brand/05883592877514354.jpg",
-          msg:"青彩"
+          id: 8,
+          txt: "生鲜水产"
         },
       ]
     }
-  ]
-  }
+  ];
+  res.send(arr);
+});
+//排序列表
+router.get('/sortList', function (req, res, next) {
+  var serchcon = req.query.serchcon;
+  if (serchcon == "羽绒服") {
+    arr = [
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+        dract: "三防面料 穿搭有型 ",
+        detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+        rectPrice: "￥1699",
+        price: "￥1999",
+      }
+    ]
+  }else if(serchcon == "雅诗兰黛"){
+    arr=[
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/399/285899/1_main_285899_360.jpg",
+        dract: "休护肌底 时刻年轻 ",
+        detail: "(跨境)美国雅诗兰黛高能小棕瓶面部精华20ml",
+        rectPrice: "￥529",
+        price: "￥837",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+        dract: "不怕蓝光 任性刷屏 ",
+        detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+        rectPrice: "￥398",
+        price: "￥597",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/38/272538/1_main_272538_360.jpg",
+        dract: "温和清洁 舒适清新 ",
+        detail: "(跨境)美国雅诗兰黛净莹柔肤洁面乳30ml*3支",
+        rectPrice: "￥99",
+        price: "￥132",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+        dract: "雕琢年轻轮廓 ",
+        detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+        rectPrice: "￥218",
+        price: "￥327",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+        dract: "滋润着色 饱满丰唇 ",
+        detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+        rectPrice: "￥99",
+        price: "￥148",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/270/273270/1_main_273270_360.jpg",
+        dract: "释放肌肤活力 ",
+        detail: "(跨境)美国雅诗兰黛特润修护肌透精华露15ml",
+        rectPrice: "￥149",
+        price: "￥224",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/271/273271/1_main_273271_360.jpg",
+        dract: "清透润泽好吸收 ",
+        detail: "(跨境)美国雅诗兰黛赋活原生液50ml*2瓶",
+        rectPrice: "￥218",
+        price: "￥327",
+      },
+      {
+        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/273/273273/1_main_273273_360.jpg",
+        dract: "不见干松纹 ",
+        detail: "(跨境)美国雅诗兰黛多效智妍精华面霜15ml*2瓶",
+        rectPrice: "￥198",
+        price: "￥297",
+      },
 
+    ]
+  }
   res.send(arr);
 });
 module.exports = router;

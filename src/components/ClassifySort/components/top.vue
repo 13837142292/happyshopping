@@ -1,6 +1,6 @@
 <template>
-  <div class="top">
-    <input type="text" name id placeholder="搜索商品,品牌" @click="tiao"/>
+  <div class="top" @click="tiao">
+    <input type="text" name id placeholder="搜索商品,品牌" />
     <img src="../images/搜索.png" alt />
   </div>
 </template>
@@ -25,6 +25,7 @@ export default {
   border-bottom: 1px solid #f3f5f5;
 }
 input {
+  outline:none;
   width:340px;
   height: 30px;
   line-height: 30px;
