@@ -5,6 +5,8 @@ import ClassifySort from "../components/ClassifySort/classifySort.vue"
 import My from "../components/My/my.vue"
 import ShoppingCart from "../components/ShoppingCart/shoppingCart.vue"
 import serch from "../components/ClassifySort/components/serch.vue"
+import detail from "../components/ShoppingCart/components/detail-one.vue"
+import sortlist from "../components/ClassifySort/components/sortlist.vue"
 Vue.use(VueRouter)
 
 let    routes=[
@@ -32,6 +34,11 @@ let    routes=[
             name:"serch",
             path:"/serch",
             component:serch
+        },
+        {
+            name:"sortlist",
+            path:"/sortlist",
+            component:sortlist
         },
         {
             path:'*',
