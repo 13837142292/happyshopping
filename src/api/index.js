@@ -20,11 +20,35 @@ export function getTodayList(){
   return axios.get('activity');
 }
 
-
+//shoppingCart
 //获取购物车信息
 export function getshoppingCart(){
    return  axios.get("shoppingCart/shoppingCart")
 }
+//购物车物品详轮播图1
+export function getShoppingBanner(){
+  return  axios.get("shoppingCart/detailBanner")
+}
+//购物车详情信息
+export function getShoppingNews(){
+  return  axios.get("shoppingCart/detailNews")
+}
+//用户评价
+export function getComment(){
+  return  axios.get("shoppingCart/detailComment")
+}
+
+//猜你喜欢物品
+export function getlikeProduct(){
+  return  axios.get("shoppingCart/likeProduct")
+}
+
+
+
+
+
+
+
 
 //classifySort
 //获取左侧列表
