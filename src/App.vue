@@ -4,7 +4,6 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <NavList></NavList>
     <router-view></router-view>
-
   </div>
 </template>
 

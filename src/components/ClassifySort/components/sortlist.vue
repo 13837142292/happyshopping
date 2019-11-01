@@ -5,11 +5,9 @@
         <li
           v-for="(item,index) in titleList"
           :key="index"
-          @click="active(index)"
-          :class="{active:cruli==index}"
+          @click="active(item,index)"
+          :class="{active:cruli==index&&show==true}"
         >{{item}}</li>
-        <!-- <li >销售</li>
-        <li :class="{active:show==true}">新品</li>-->
         <li class="price" ref="price" @click="change">
           价格
           <span :class="{on:isShow==true,down:isshow==true}"></span>
@@ -20,6 +18,7 @@
         <span></span>
       </div>
     </div>
+    <!-- 弹出框 -->
     <model ref="mymodel"></model>
     <div class="con wrapper">
       <ul>
@@ -50,12 +49,17 @@ export default {
       bs: null,
       isShow: false,
       isshow: false,
+      show: true,
       titleList: ["综合", "销售", "新品"],
-      cruli: 0
+      title: "",
+      cruli: null,
+      myli: [],
+      // sel: false
     };
   },
   created() {
     this.getParams();
+    this.title = "综合";
   },
   methods: {
     getParams() {
@@ -63,26 +67,37 @@ export default {
       this.con = routerParams;
       window.console.log(this.con);
     },
-    change() {
+    async change() {
+      this.show = false;
       this.$refs.price.style.color = "#c4193f";
-      if (this.isShow) {
+      if (this.isShow == true) {
+        this.title = "价格上";
+        this.sortList = await getsortList(this.con, this.title);
         this.isshow = true;
         this.isShow = false;
-      } else {
+      } else if (this.isShow == false) {
+        this.title = "价格下";
+        this.sortList = await getsortList(this.con, this.title);
         this.isshow = false;
         this.isShow = true;
       }
     },
-    active(index) {
+    async active(item, index) {
       this.cruli = index;
+      this.title = item;
+      this.sortList = await getsortList(this.con, this.title);
+      this.show = true;
+      this.$refs.price.style.color = "#333333";
+      this.isshow = false;
+      this.isShow = false;
     },
     select() {
       this.$refs.mymodel.show();
-      this.$refs.mysel.style.border="none";
+      // this.sel = true;
     }
   },
   async mounted() {
-    this.sortList = await getsortList(this.con);
+    this.sortList = await getsortList(this.con, this.title);
     this.$nextTick(() => {
       //使用bscroll
       this.bs = new BScroll(".wrapper", {
@@ -100,12 +115,11 @@ export default {
   height: 100%;
   position: relative;
   z-index: 800;
-
   .top {
     height: 40px;
     width: 100%;
     background: #fff;
-
+    border-bottom: 0.03px solid #ddd9d9;
     display: flex;
     text-align: center;
     line-height: 40px;
@@ -117,8 +131,7 @@ export default {
     z-index: 999;
     .select {
       width: 95px;
-    
-       border-bottom: 0.03px solid #ddd9d9;
+      border-left: 0.03px solid #ddd9d9;
       span {
         width: 12px;
         height: 12px;
@@ -130,13 +143,12 @@ export default {
     ul {
       width: 280px;
       display: flex;
-      border-bottom: 0.03px solid #ddd9d9;
+      // border-bottom: 0.03px solid #ddd9d9;
       li {
         height: 40px;
         width: 25%;
       }
       li.price {
-          border-right: 0.03px solid #ddd9d9;
         span {
           width: 14px;
           height: 14px;
@@ -148,10 +160,7 @@ export default {
       }
     }
   }
-  //   .sel{
-  //       width: 100%;
-  //       height: 270px;
-  //   }
+
   .con {
     padding-top: 40px;
     height: calc(100% - 40px);
@@ -216,4 +225,10 @@ export default {
   background: url(../images/down.png) no-repeat !important;
   background-size: auto 100% !important;
 }
+// .sel {
+//   height:40.4px;
+//   position: relative;
+//   z-index: 500;
+//   background: #fff;
+// }
 </style>

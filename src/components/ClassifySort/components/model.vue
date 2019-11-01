@@ -10,9 +10,9 @@
       <div class="price">
         <p>价格区间</p>
         <div>
-          <input type="text" placeholder="最低价" />
+          <input type="text" placeholder="最低价" ref="min" />
           <i></i>
-          <input type="text" placeholder="最高价" />
+          <input type="text" placeholder="最高价" ref=max />
         </div>
       </div>
       <div class="btn">
@@ -35,8 +35,7 @@ export default {
     },
     hide() {
       this.isShow = false;
-    //   this.$refs.sure.style.border="";
-    }
+    },
   }
 };
 </script>
@@ -45,22 +44,24 @@ export default {
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 8;
+  z-index:100;
 }
 .box {
-  position: fixed;
-  top: 40px;
+  position:fixed;
+  top: 30px;
   left: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 11;
+  z-index:1000;
   font-size: 13px;
   .send {
     padding-left: 4%;
     margin-bottom: 15px;
+    width: 100px;
+    // border-top: 0.03px solid #ddd9d9;
     p {
       color: #313131;
       padding-top: 20px;
@@ -95,6 +96,7 @@ export default {
       padding-bottom: 3px;
     }
     input {
+      outline: none;
       background-color: #f3f5f6;
       color: #5a5a5a;
       font-size: 13px;

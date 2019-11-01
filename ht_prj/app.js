@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var shoppingCartRouter = require('./routes/shoppingCart');
 var my = require('./routes/my');
 var classifySort = require('./routes/classifySort');
+var login=require('./routes/login');
 var app = express();
 app.use(cors());
 // view engine setup
@@ -27,7 +28,8 @@ app.use('/users', usersRouter);
 app.use('/shoppingCart', shoppingCartRouter);
 app.use('/classifySort',classifySort);
 app.use('/my',my);
-
+app.use('/login',login);
+// app.use('/users',users);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
