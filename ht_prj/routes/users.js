@@ -4,7 +4,7 @@ var router = express.Router();
 var fs = require('fs');
 // 引入jwt token工具
 const JwtUtil = require('../public/jwt.js');
-let result = {};
+// let result = {};
 // 登录
 router.post('/users', (req, res) => {
   // 读取文件
@@ -14,6 +14,7 @@ router.post('/users', (req, res) => {
     if (!err) {
       arr = JSON.parse(data);//将本地数据转换为数组对象
       console.log(req.body.username);
+      var userName=req.body.username;
       for (var i = 0; i < arr.length; i++) {
         if (req.body.username == arr[i].username) {
           console.log(arr[i].username);
@@ -24,14 +25,20 @@ router.post('/users', (req, res) => {
 
             // 将用户id传入并生成token
             let jwt = new JwtUtil();
-            let token = jwt.generateToken(req.body.username);
+            let token = jwt.generateToken(userName);
             // 将 token 返回给客户端
             res.send({ status: 200, msg: '登陆成功', token: token });
+            res.end();
+            return;
           } else {
             res.send({ status: 200, msg: '密码错误' })
+            return;
+            // res.end()
           }
         } else {
           res.send({ status: 200, msg: '用户名错误' })
+          return;
+          // res.end()
         }
       }
     } else {

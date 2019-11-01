@@ -30,6 +30,7 @@ export function getTodayList(){
   return axios.get('activity');
 }
 
+
 //shoppingCart
 //获取购物车信息
 export function getshoppingCart(){
