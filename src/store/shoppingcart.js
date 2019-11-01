@@ -8,6 +8,7 @@ var store=new Vuex.Store({
         // 存储token
         Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : ''
 
+     
     },
    mutations:{
         // 修改token，并将token存入localStorage
