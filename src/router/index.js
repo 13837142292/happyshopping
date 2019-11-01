@@ -11,9 +11,19 @@ import send from "../components/ShoppingCart/components/send.vue"
 
 import serch from "../components/ClassifySort/components/serch.vue"
 import sortlist from "../components/ClassifySort/components/sortlist.vue"
+import userTop from "../components/My/components/user-top.vue"
+import login from "../components/My/components/login.vue"
 Vue.use(VueRouter)
 
 let    routes=[
+    {
+        path: "/login",
+        component: login
+    },
+    {
+        path: '/userTop',
+        component: userTop
+    },
         {
             path:'/',
             redirect:"/home"
