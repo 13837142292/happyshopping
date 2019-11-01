@@ -1,7 +1,7 @@
 <template>
     <div class="list">
-        <ul ref="myul" @click="tiao">
-            <li v-for="(item,index) in myTcart" :key="index" ref="myli" >
+        <ul ref="myul">
+            <li v-for="(item,index) in myTcart" :key="index" ref="myli"  @click="tiao">
                 <img v-lazy="item.img">
                 <p class="des">{{item.title}}</p>
                 <p class="price">￥{{item.money}}</p>
