@@ -1271,7 +1271,13 @@ router.get('/serchList', function (req, res, next) {
 //排序列表
 router.get('/sortList', function (req, res, next) {
   var serchcon = req.query.serchcon;
+  var title = req.query.title;
+  console.log(serchcon)
+  console.log(title == '综合');
+  var arr = [];
+  console.log(serchcon == "雅诗兰黛")
   if (serchcon == "羽绒服") {
+
     arr = [
       {
         img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
@@ -1358,66 +1364,358 @@ router.get('/sortList', function (req, res, next) {
         price: "￥1999",
       }
     ]
-  }else if(serchcon == "雅诗兰黛"){
-    arr=[
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/399/285899/1_main_285899_360.jpg",
-        dract: "休护肌底 时刻年轻 ",
-        detail: "(跨境)美国雅诗兰黛高能小棕瓶面部精华20ml",
-        rectPrice: "￥529",
-        price: "￥837",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
-        dract: "不怕蓝光 任性刷屏 ",
-        detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
-        rectPrice: "￥398",
-        price: "￥597",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/38/272538/1_main_272538_360.jpg",
-        dract: "温和清洁 舒适清新 ",
-        detail: "(跨境)美国雅诗兰黛净莹柔肤洁面乳30ml*3支",
-        rectPrice: "￥99",
-        price: "￥132",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
-        dract: "雕琢年轻轮廓 ",
-        detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
-        rectPrice: "￥218",
-        price: "￥327",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
-        dract: "滋润着色 饱满丰唇 ",
-        detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
-        rectPrice: "￥99",
-        price: "￥148",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/270/273270/1_main_273270_360.jpg",
-        dract: "释放肌肤活力 ",
-        detail: "(跨境)美国雅诗兰黛特润修护肌透精华露15ml",
-        rectPrice: "￥149",
-        price: "￥224",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/271/273271/1_main_273271_360.jpg",
-        dract: "清透润泽好吸收 ",
-        detail: "(跨境)美国雅诗兰黛赋活原生液50ml*2瓶",
-        rectPrice: "￥218",
-        price: "￥327",
-      },
-      {
-        img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/273/273273/1_main_273273_360.jpg",
-        dract: "不见干松纹 ",
-        detail: "(跨境)美国雅诗兰黛多效智妍精华面霜15ml*2瓶",
-        rectPrice: "￥198",
-        price: "￥297",
-      },
+  } else if (serchcon == "雅诗兰黛") {
 
-    ]
+    if (title == "综合") {
+      arr = [
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/399/285899/1_main_285899_360.jpg",
+          dract: "休护肌底 时刻年轻 ",
+          detail: "(跨境)美国雅诗兰黛高能小棕瓶面部精华20ml",
+          rectPrice: "￥529",
+          price: "￥837",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/38/272538/1_main_272538_360.jpg",
+          dract: "温和清洁 舒适清新 ",
+          detail: "(跨境)美国雅诗兰黛净莹柔肤洁面乳30ml*3支",
+          rectPrice: "￥99",
+          price: "￥132",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/270/273270/1_main_273270_360.jpg",
+          dract: "释放肌肤活力 ",
+          detail: "(跨境)美国雅诗兰黛特润修护肌透精华露15ml",
+          rectPrice: "￥149",
+          price: "￥224",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/271/273271/1_main_273271_360.jpg",
+          dract: "清透润泽好吸收 ",
+          detail: "(跨境)美国雅诗兰黛赋活原生液50ml*2瓶",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/273/273273/1_main_273273_360.jpg",
+          dract: "不见干松纹 ",
+          detail: "(跨境)美国雅诗兰黛多效智妍精华面霜15ml*2瓶",
+          rectPrice: "￥198",
+          price: "￥297",
+        },
+
+      ]
+    }
+    if (title == "销售") {
+      arr = [
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/309/279809/1_main_279809_360.jpg",
+          dract: "三防面料 穿搭有型 ",
+          detail: "加拿大SaintDyfan强防寒95%白鹅绒服（男款）",
+          rectPrice: "￥1699",
+          price: "￥1999",
+        }
+      ]
+    }
+    if (title == "新品") {
+      arr = [
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/402/279902/1_main_279902_360.jpg",
+          dract: "雕琢年轻轮廓 ",
+          detail: "(跨境)美国雅诗兰黛弹性紧实晚霜15ml+日霜15ml+眼霜5ml",
+          rectPrice: "￥218",
+          price: "￥327",
+        },
+      ]
+    }
+    if (title == "价格上") {
+      arr = [
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/356/255856/1_main_255856_360.jpg",
+          dract: "不怕蓝光 任性刷屏 ",
+          detail: "(跨境)美国雅诗兰黛 新款特润抗蓝光眼霜15ml",
+          rectPrice: "￥398",
+          price: "￥597",
+        },
+      ]
+    }
+    if (title == "价格下") {
+      arr = [
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+        {
+          img: "https://ecimg.happigo.com/data/upload/shop/store/goods/1/261/283761/1_main_02_360.jpg",
+          dract: "滋润着色 饱满丰唇 ",
+          detail: "(跨境)美国雅诗兰黛花漾倾慕红管限量唇膏260蔷薇色/1.2g*2支",
+          rectPrice: "￥99",
+          price: "￥148",
+        },
+      ]
+    }
   }
   res.send(arr);
 });
