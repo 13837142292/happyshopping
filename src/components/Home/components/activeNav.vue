@@ -7,15 +7,15 @@
 export default {
     data(){
         return {
-            newsrc:require("../img/indexOne.jpg")
+            
         }
-    }
+    },
+    props:['newsrc']
 }
 </script>
 <style lang="less" scoped>
-.img1{
+.imgbox{
     position: relative;
-   
 }
  .imgbox::after{
     content: "";
@@ -23,12 +23,11 @@ export default {
     height: 0;
     position: absolute;
     left: 50%;
-    bottom:7.2%;
+    bottom:0%;
     z-index: 2;
     border-bottom: 8px solid #fff;
     border-right: 8px solid transparent;
     border-left: 8px solid transparent;
     box-sizing: border-box
 }
-
 </style>
