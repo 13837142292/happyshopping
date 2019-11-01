@@ -76,7 +76,7 @@
             <p>合计：￥{{allTotal}}</p>
             <p>不含运费/税费</p>
         </div>
-        <button>结算({{4}})</button>
+        <button>结算({{num}})</button>
         </div>
         <!-- 完成时显示 -->
        <div class="finish" v-if="finish">
@@ -103,7 +103,8 @@ export default {
             currentIndex:null,
             finish:false,
             every:false,
-            allTotal:0
+            allTotal:0,
+            num:0
         }
     },
     computed(){
@@ -151,6 +152,10 @@ export default {
 
               this.calTotal()
               this.isChange();
+
+              if(this.isShow==true){
+                this.num=4;
+              }
         
 
         },
@@ -166,8 +171,15 @@ export default {
          this.calTotal();
          //调用内容是否改变方法
          this.isChange();
-         
-         
+           
+
+             //计算有几个被选中
+             this.num=0;
+             this.productList.forEach((item)=>{
+              if(item.isShow==true){  
+                   this.num++;
+                      } 
+                  })
         },
         //删除
          del(){
@@ -229,7 +241,9 @@ export default {
     }
     },
     mounted(){
-    
+
+
+  
     }
    
 }

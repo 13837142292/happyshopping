@@ -74,6 +74,10 @@ export function getCart(){
   return  axios.get("shoppingCart/cart")
 }
 
+//有图评价
+export function getpicComment(){
+  return  axios.get("shoppingCart/picComment")
+}
 
 
 

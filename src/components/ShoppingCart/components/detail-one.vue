@@ -1,11 +1,11 @@
 <template>
-    <div class="all">
+    <div class="all" ref="tit">
         <!-- 头部轮播图 -->
-        <div>
+        <div ref="banner">
               <banner></banner>
         </div>
         <!-- 商品信息和评价 -->
-        <div class="introduce" v-for="(item,index) in shoppingNews" :key="index">
+        <div class="introduce" ref="introduce" v-for="(item,index) in shoppingNews" :key="index">
             <div class="top">
               <p>{{item.introduce}}</p>
               <span>{{item.compontent}}</span>
@@ -59,7 +59,7 @@
             <!-- 用户评价 -->
             <div class="talk">
                 <div class="title">
-             <p>用户评价(10)</p>
+             <p>用户评价(6)</p>
              <span><i>100%</i>好评</span>
                 </div>
              
@@ -79,7 +79,7 @@
                  </li>
              </ul>
                <div class="look">
-               <p>查看更多评价 </p>  
+               <p  @click="lookCon">查看更多评价 </p>  
                 <img src="../images/double.png" alt="">  
                 </div>
             </div> 
@@ -92,16 +92,19 @@
 
         </div>
       <!-- 猜你喜欢 -->
-      <likeProduct></likeProduct>
-        <div class="gray">
+      <likeProduct ref="like"></likeProduct>
+        <div class="gray" ref="gray">
 
         </div>
 
         <!-- 商品详情 -->
         <div class="bottom" ref="bot">
+            <div class="tit" :class="{fixed:isFixed}">
           <router-link    tag="li" to="/detail-one/decripe" ><p >商品详情</p></router-link> 
           <router-link   tag="li" to="/detail-one/parameter"><p >产品参数</p></router-link>
           <router-link  tag="li" to="/detail-one/send"><p>配送与售后</p></router-link>
+            </div>
+         
            <router-view></router-view>
         </div>
        
@@ -146,7 +149,8 @@ export default {
         return{
            queryInfo:[],
            shoppingNews:[],
-           commentList:[]
+           commentList:[],
+           isFixed:false
         }
     },
   async  created(){
@@ -166,15 +170,40 @@ export default {
       //是否显示遮罩层
       showOrhiden(){
           window.console.log(this.$refs.model.show())
+      },
+      //查看更多评价
+      lookCon(){
+         this.$router.replace("/comment");
+    
+      },
+      height(){
+      var a=document.body.scrollTop||window.pageYOffset||document.documentElement.scrollTop;
+    //   window.console.log(a);
+      if(a>1320){
+          this.isFixed=true;
+      }else{
+          this.isFixed=false;
+      }
       }
      
 },
 watch:{
     "$route":"getParams"
+},
+mounted(){
+    window.addEventListener("scroll",this.height)
+    
+ 
 }
 }
 </script>
 <style lang="less" scoped>
+.fixed{
+    position: fixed;
+    left: 0;
+    top:0;
+    background: white;
+}
 .all{
     width: 100%;
     height: calc(100%-51px);
@@ -463,7 +492,11 @@ watch:{
     left: 0;
     border: 1px solid transparent;
     box-sizing: border-box;
-    li{ 
+    .tit{
+        width: 100%;
+        height: 42px;
+        border-bottom: 1px solid #e0e0e0;
+         li{ 
         width: calc(100%/3);
         height: 100%;  
         display: flex;
@@ -473,12 +506,15 @@ watch:{
         color: #969696;
         line-height: 42px;
     }
-.router-link-active{
+    .router-link-active{
     color: #1e1e1e;
     p{
         border-bottom:2px solid #C4223C;
     }
 }
+    }
+   
+
     
 }
 
