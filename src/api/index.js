@@ -43,9 +43,25 @@ export function getlikeProduct(){
   return  axios.get("shoppingCart/likeProduct")
 }
 
+//商品详情
+export function getDecripe(){
+  return  axios.get("shoppingCart/decripe")
+}
 
+//产品参数
+export function getParameter(){
+  return  axios.get("shoppingCart/parameter")
+}
 
+//配送与售后
+export function getSend(){
+  return  axios.get("shoppingCart/send")
+}
 
+//详情页加入购物车信息
+export function getCart(){
+  return  axios.get("shoppingCart/cart")
+}
 
 
 

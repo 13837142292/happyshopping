@@ -49,7 +49,7 @@ export default {
           display: flex;
           li{
             width:130px;
-            height: 230px;
+            height: 200px;
             display: inline-block;
             padding-top: 20px;
             padding-bottom: 10px;

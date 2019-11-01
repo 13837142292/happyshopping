@@ -1,5 +1,5 @@
 <template>
-  <swiper :options="swiperOption" >
+  <swiper :options="swiperOption" v-if="swiperSlides">
     <swiper-slide v-for="(item, index) in swiperSlides" :key="index"  >
         <img :src="item" alt="">
     </swiper-slide>

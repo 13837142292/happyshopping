@@ -4,8 +4,12 @@ import Home from "../components/Home/home.vue"
 import ClassifySort from "../components/ClassifySort/classifySort.vue"
 import My from "../components/My/my.vue"
 import ShoppingCart from "../components/ShoppingCart/shoppingCart.vue"
-import serch from "../components/ClassifySort/components/serch.vue"
 import detail from "../components/ShoppingCart/components/detail-one.vue"
+import decripe from "../components/ShoppingCart/components/decripe.vue"
+import parameter from "../components/ShoppingCart/components/parameter.vue"
+import send from "../components/ShoppingCart/components/send.vue"
+
+import serch from "../components/ClassifySort/components/serch.vue"
 import sortlist from "../components/ClassifySort/components/sortlist.vue"
 Vue.use(VueRouter)
 
@@ -29,7 +33,31 @@ let    routes=[
         {
             path:'/shoppingCart',
             component:ShoppingCart
+        }, 
+        {
+             path:'/detail-one',
+             component:detail,
+             children:[
+                 {
+                     path:"",
+                     redirect:"decripe"
+
+                 },
+                          {
+                             path:"decripe",
+                             component:decripe
+                          },
+                          {
+                             path:"parameter",
+                             component:parameter
+                          },
+                          {
+                             path:"send",
+                             component:send
+                          }
+                     ]
         },
+        
         {   
             name:"serch",
             path:"/serch",
@@ -43,11 +71,8 @@ let    routes=[
         {
             path:'*',
             redirect:"/home"
-        },
-        {
-             path:'/detail-one',
-             component:detail
         }
+      
         
     ]
     let router=new VueRouter({

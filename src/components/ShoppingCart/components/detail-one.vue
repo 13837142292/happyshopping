@@ -93,7 +93,39 @@
         </div>
       <!-- 猜你喜欢 -->
       <likeProduct></likeProduct>
+        <div class="gray">
+
+        </div>
+
+        <!-- 商品详情 -->
+        <div class="bottom" ref="bot">
+          <router-link    tag="li" to="/detail-one/decripe" ><p >商品详情</p></router-link> 
+          <router-link   tag="li" to="/detail-one/parameter"><p >产品参数</p></router-link>
+          <router-link  tag="li" to="/detail-one/send"><p>配送与售后</p></router-link>
+           <router-view></router-view>
+        </div>
+       
+         <!-- 底部 -->
+         <div class="last">
+           <router-link tag="li" to="/home">
+           <i class="iconfont icon-tianchongxing-"></i>
+               首页
+           </router-link>
+           <router-link tag="li" to="/classifySort">
+           <i class="iconfont icon-fenlei"></i>
+               分类
+           </router-link>
+           <button @click="showOrhiden">加入购物车</button>
+           <button class="buy">立即购买</button>
+         </div>
+
+         <div class="model">
+             <model ref="model"></model>
+         </div>
+      
     </div>
+
+    
 </template>
 
 <script>
@@ -101,11 +133,14 @@ import banner from "./banner.vue"
 import {getShoppingNews} from "@/api"
 import {getComment}  from "@/api"
 import likeProduct from "./likeList.vue"
+import model from "./model.vue"
 
 export default {
     components:{
         banner,
-        likeProduct
+        likeProduct,
+        model
+        
     },
     data(){
         return{
@@ -119,14 +154,20 @@ export default {
     
     this.shoppingNews=await getShoppingNews();
     this.commentList=await getComment();
-      
 
+    
+    // window.console.log(arr);
     },
     methods:{
       getParams(){
           const routerParams=this.$route.query.queryid
           this.queryInfo=routerParams;
+      },
+      //是否显示遮罩层
+      showOrhiden(){
+          window.console.log(this.$refs.model.show())
       }
+     
 },
 watch:{
     "$route":"getParams"
@@ -415,8 +456,71 @@ watch:{
         }
 }
 
-
+.bottom{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    li{ 
+        width: calc(100%/3);
+        height: 100%;  
+        display: flex;
+        justify-content: space-around; 
+        float: left;
+        font-size: 16px;
+        color: #969696;
+        line-height: 42px;
+    }
+.router-link-active{
+    color: #1e1e1e;
+    p{
+        border-bottom:2px solid #C4223C;
+    }
+}
+    
 }
 
-
+}
+ 
+ .last{
+     width: 100%;
+     height: 50px;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     background: white;
+     z-index: 999;
+     li {
+         width: 60px;
+         height: 50px;
+         float: left;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         flex: 1;
+         border-right: 1px solid #eeebeb;
+         border-top: 1px solid #eeebeb;
+         box-sizing: border-box;
+         i{
+             font-size: 22px;
+          }
+      }
+      button{
+          width: 127px;
+          height: auto;
+          line-height: 50px;
+          font-size: 14px;
+          color: white;
+          background: #DF2946;
+          border: none;
+          font-size: 16px;
+      }
+      .buy{
+          background: #C31F3A;
+          border-left: 1px solid #b4a5a5;
+      }
+ }
 </style>
