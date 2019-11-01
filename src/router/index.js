@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "../components/Home/home.vue"
+import sellwell from "../components/Home/components/sellwell.vue"
+import news from "../components/Home/components/news.vue"
+import indexsearch from "../components/Home/components/serch.vue"
 import ClassifySort from "../components/ClassifySort/classifySort.vue"
 import My from "../components/My/my.vue"
 import ShoppingCart from "../components/ShoppingCart/shoppingCart.vue"
@@ -97,6 +100,11 @@ let    routes=[
             component:serch
         },
         {
+            name:"indexsearch",
+            path:'/indexsearch',
+            component:indexsearch
+        },
+        {
             name:"sortlist",
             path:"/sortlist",
             component:sortlist
@@ -104,7 +112,16 @@ let    routes=[
         {
             path:'*',
             redirect:"/home"
-        }
+        },
+        {
+            path:'/sellwell',
+            component:sellwell
+        },
+        {
+            path:'/news',
+            component:news
+        },
+        
       
         
     ]
