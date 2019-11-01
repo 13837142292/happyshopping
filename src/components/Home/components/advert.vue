@@ -1,7 +1,7 @@
 <template>
     <div>
         <img src="../img/newadvert.gif">
-        <img src="../img/newActive.png" class="newActive">
+        <img src="../img/newActive.png" class="newActive" style="background-color:#fff">
     </div>
 </template>
 <script>
@@ -15,6 +15,6 @@ export default {
 </script>
 <style lang="less" scoped>
     .newActive{
-        padding: 15px 0;
+        padding: 20px 0;
     }
 </style>

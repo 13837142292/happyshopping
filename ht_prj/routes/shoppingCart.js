@@ -89,7 +89,6 @@ router.get('/detailComment', function(req, res, next) {
             name:"春天****YY",
             date:"2019-09-19",
             content:"很好用，是原装进口的，谢谢快乐购。",
-            pic:""
 
         },
         {
@@ -105,7 +104,6 @@ router.get('/detailComment', function(req, res, next) {
             name:"WX******784",
             date:"2019-10-26",
             content:"默认好评",
-            pic:""
 
         },
         {
@@ -126,6 +124,29 @@ router.get('/detailComment', function(req, res, next) {
         }
     ]
     res.send(arr);
+});
+
+//有图评价
+router.get('/picComment', function(req, res, next) {
+  var arr = [
+      {
+          img:"https://ecimg.happigo.com/data/upload/member/avatar/a59/m59123.jpg",
+          name:"WEB****33F",
+          date:"2019-08-26",
+          content:"送朋友的 朋友说很好 质地细腻 遮瑕效果不错 有光泽 比之前的兰芝气垫好用 谢谢快乐购",
+          pic:"https://ecimg.happigo.com/data/upload/product/comments/201908/26/193729/5182785/ac45cccdab6724defda6eaa46d4ab56e_200_200.png"
+
+      },
+      {
+          img:"https://ecimg.happigo.com/data/upload/member/avatar/a13/m13458.jpg",
+          name:"AP******496",
+          date:"2019-09-27",
+          content:"韩国进口Hanskin韩斯清精华粉底霜BB霜，好用，我用完，会再购买。",
+          pic:"https://ecimg.happigo.com/data/upload/product/comments/201909/27/4044844/5208358/68e1ddae39c649e11cd43a2ec35ca050_200_200.jpg"
+
+      }
+  ]
+  res.send(arr);
 });
 
 //猜你喜欢部分的商品信息

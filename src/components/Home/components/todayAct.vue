@@ -1,35 +1,51 @@
 <template>
     <div class="list">
         <ul ref="myul">
-            <li v-for="(item,index) in TcartList" :key="index" ref="myli">
+            <li v-for="(item,index) in myTcart" :key="index" ref="myli"  @click="tiao">
                 <img v-lazy="item.img">
                 <p class="des">{{item.title}}</p>
                 <p class="price">￥{{item.money}}</p>
             </li>
         </ul>
-
     </div>
     
 </template>
 <script>
-import {getTodayList} from "@/api"
+
 export default {
     data(){
         return {
-            TcartList:[],
+           myTcart:this.TcartList,
+           mygetData:this.getData
         }
     },
-    created(){
-       
+    props:['TcartList','getData'],
+    isShowDia(parentToChildData, isVisible){
+        let self = this
+        if (!parentToChildData) {
+          return
+        }
+        self.dialogIsVisible = isVisible
+        self.myTcart = parentToChildData
+      },
+   
+    components:{
+     
     },
     async mounted(){
-         this.TcartList= await getTodayList();
+        this.myTcart=await this.getData;
          this.$nextTick(()=>{
              var liWidth = this.$refs.myli[0].offsetWidth;
-             window.console.log(liWidth);
-             this.$refs.myul.style.width=(this.TcartList.length * liWidth+1)+"px";
+            //  window.console.log(liWidth);
+            //  window.console.log(this.myTcart.length);
+             this.$refs.myul.style.width=(this.myTcart.length * liWidth+5)+"px";
          })
         
+    },
+    methods:{
+        tiao(){
+            this.$router.replace('/detail-one/decripe')
+        }
     }
     
 }
@@ -38,13 +54,16 @@ export default {
     .list{
         padding-top: 15px;
         overflow-x: auto;
+        background-color: #ffffff;
         ul{
-           
+            //  width: 1220px;
             li{
                 width: 144px;
                 height: 205px;
                 display: inline-block;
                 padding: 0 10px;
+                background-color: #ffffff;
+                box-sizing: border-box;
                 .price{
                     color: #c4193f;
                     font-size: 16px;

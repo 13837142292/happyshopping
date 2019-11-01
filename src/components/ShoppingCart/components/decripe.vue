@@ -28,7 +28,7 @@ export default {
 .decripe{
     width: 100%;
     height: calc(100%-51px);
-    padding: 10px;
+    padding:0px 10px;
     padding-bottom: 51px;
     box-sizing: border-box;
     ul{

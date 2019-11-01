@@ -428,9 +428,181 @@ router.get('/goodThings', function(req, res, next) {
       money:499,
       OriginalPrice:699
     },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/117/278617/1_main_111_1280.jpg",
+      title:"莎曼尼护腰护颈乳胶套组（床垫5cm*1件+乳胶被*1件+保护套*1件）1.8M",
+      money:999,
+      OriginalPrice:1999
+    }
   ]
   res.send(arr);
 });
-
 //热销
+router.get('/sellwell', function(req, res, next) {
+  var arr = [
+      {
+          img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/307/261307/1_main_261307_360.jpg",
+          title:"科尔沁草原美牛肉香",
+          ps:"科尔沁康新牧场香美酱卤牛肉 五香味150g*10袋 香辣味150g*6袋",
+          dis:"TA们说：“昨天开袋吃了，味道蛮好的，物流很快。”",
+          money:289,
+          OriginalPrice:399
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/477/279977/1_main_s_360.jpg",
+        title:"软化水质去污泡腾片",
+        ps:"德国Domol多默莱洗衣机清洁去污泡腾片15g*2块 洗衣机不干净衣服越洗越脏 定期清洗才健康",
+        dis:"TA们说：“之前真是没想到，洗衣机里竟然会有这么多脏东西，回想起来都觉得恶心！这个清洗剂太好用了，泡了两个小时，现在洗衣机特别干净””",
+        money:9.9,
+        OriginalPrice:29.9
+      },
+      {
+            img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/434/267934/1_main_01_360.jpg",
+            title:"守护你的“眼”值",
+            ps:"京城之霜五爪提拉逆时修护眼霜 15g*3瓶",
+            dis:"TA们说：“多次购买了，这款京城眼霜用了好多年了，本人非常喜欢，淡淡的茶香味，滋润效果很好，提拉眼角，减少细小皱纹效果不错，这次推荐给朋友，帮朋友买的，她用了几天，也很喜欢，感觉挺好。谢谢快乐购！值得信赖的购物平台。”",
+            money:289,
+            OriginalPrice:399
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/273/293273/1_main_293273_360.jpg",
+        title:"Q弹Q弹的深海鳕鱼丸",
+        ps:"福生阿拉斯加原味鳕鱼丸  500g*10袋",
+        dis:'',
+        money:279,
+        OriginalPrice:399
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/132/280632/1_main_280632_360.jpg",
+      title:"来自内蒙大草原的嫩羊肉",
+      ps:"蒙都红焖羊肉 400g*8盒 加热即食",
+      dis:'',
+      money:298,
+      OriginalPrice:398
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/303/256803/1_main_256803_360.jpg",
+      title:"1副抵6副 高清抗蓝光",
+      ps:"HUGOMOFELL德国第二代换片高清老花镜",
+      dis:"TA们说：“高清老花镜给我们老年人带来了新的希望，起初我在两家店也订购了和该店相似的产品但我戴着不合适都退货了。”",
+      money:399,
+      OriginalPrice:699
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/469/252969/1_main_252969_360.jpg",
+      title:"无涂层真不锈纯铁锅",
+      ps:"章砚铁铺铁锅（30cm炒锅含锅盖+24cm煎锅+24cm汤锅含锅盖 送锅铲+刀具三件套+和天下铁壶）",
+      dis:"TA们说：“很适合小家庭，女生也能抬起锅子。很漂亮。”",
+      money:459,
+      OriginalPrice:899
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/208/276708/1_main_276708zhu_360.jpg",
+      title:"来自新疆的馋嘴美味",
+      ps:"蜜缘新疆枣夹核桃葡萄果干 1kg",
+      dis:"TA们说：“好东西，好商品，物超所值的枣夹核桃”",
+      money:39,
+      OriginalPrice:59
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/306/261306/1_main_261306xx_360.jpg",
+      title:"来自北回归线的珍贵米粮",
+      ps:"中国紫米之乡普洱墨江紫米家庭组 210g*36袋",
+      dis:'',
+      money:289,
+      OriginalPrice:499
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/281/275281/1_main_281_360.jpg",
+      title:"安徽北部散养黄牛肉",
+      ps:"老炊酱卤牛腱肉 五香牛腱150g*15袋 赠牛肉粒50g*5袋",
+      dis:"TA们说：“牛肉特别好吃，加点红辣椒炒下，下酒的好菜，而且不像以前买的很烂，这种软硬适中，牛肉粒也好，谢谢快乐购带来了好产品。”",
+      money:289,
+      OriginalPrice:399
+    }
+    
+
+     
+  ]
+  res.send(arr);
+});
+router.get('/news', function(req, res, next) {
+  var arr = [
+      {
+          img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/481/297481/1_main_297481_360.jpg",
+          title:"加绒保暖 不显臃肿",
+          ps:"LetsDiet秋冬加绒魔术裤小黑裤修身瘦腿小脚打底 五香味150g*10袋 香辣味150g*6袋",
+          money:168,
+          OriginalPrice:199
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/480/297480/1_main_297480_360.jpg",
+        title:"高弹力强包容 细腻舒适",
+        ps:"LetsDiet经典魔术裤小黑裤修身瘦腿小脚3D提臀设计",
+        money:148,
+        OriginalPrice:199
+      },
+      {
+            img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/393/295393/1_main_295393_360.jpg",
+            title:"刺绣工艺 精美枫叶",
+            ps:"天娇美奴休闲包女士小背包小包包双肩背包软面运动包书包女双肩包SO190157H",
+          
+            money:139,
+            OriginalPrice:167
+      },
+      {
+        img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/391/295391/1_main_295391_360.jpg",
+        title:"两种背法 便捷实用",
+        ps:"天娇美奴女包包大包大学生书包大容量离家出走包女双肩包双肩背包女SO181292H",
+        money:149,
+        OriginalPrice:179
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/389/295389/1_main_295389_360.jpg",
+      title:"优雅撞色 双面皮质",
+      ps:"天娇美奴宽肩带大包迷你单肩包包大容量女式斜挎包女包手提包LB190163-2R",
+      money:158,
+      OriginalPrice:192
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/386/295386/1_main_295386_360.jpg",
+      title:"五金流苏 气质通勤",
+      ps:"天娇美奴大容量信封包小方包单肩包斜挎包相机包小包包女包LB181210-3H",
+      money:399,
+      OriginalPrice:699
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/469/252969/1_main_252969_360.jpg",
+      title:"质感皮质 柔软舒适",
+      ps:"天娇美奴新款休闲包女包手机包女士小包包小方包斜挎包女单肩包LB190151-1H",
+      money:459,
+      OriginalPrice:899
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/384/295384/1_main_295384_360.jpg",
+      title:"时尚设计 经典菱格",
+      ps:"天娇美奴单肩包链条包相机包小方包菱格包斜挎包小包包女包LB190147-3H",
+      money:39,
+      OriginalPrice:59
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/372/294872/1_main_294872_360.jpg",
+      title:"麂皮外套 时尚保暖",
+      ps:"MAGIFAS鹿皮绒外套风衣系带大衣7345C",
+      money:289,
+      OriginalPrice:499
+    },
+    {
+      img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/362/294862/1_main_294862_360.jpg",
+      title:"潮流撞色 韵味复古",
+      ps:"LANVERA手提女士枕头包包上新时尚斜挎质感小包宽肩带女包单肩L9219",
+      money:289,
+      OriginalPrice:399
+    }
+    
+
+     
+  ]
+  res.send(arr);
+});
 module.exports = router;
