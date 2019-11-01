@@ -17,7 +17,9 @@
               :class="{on:item.txt==='羽绒服'||item.txt==='雅诗兰黛'}"
               v-for="(item,index) in ite.con"
               :key="index"
+              @click="gotosortlist(item.txt)"
             >{{item.txt}}</li>
+            <!-- <li  ref="myli">身体乳</li> -->
           </ul>
         </li>
       </ul>
@@ -45,7 +47,16 @@ export default {
       this.$router.push({
         path: "/sortlist",
         query: {
-            serchcon:text
+            serchcon:text,
+        }
+      });
+    },
+    gotosortlist(con){
+        // window.console.log(con);
+        this.$router.push({
+        path: "/sortlist",
+        query: {
+            serchcon:con,
         }
       });
     }

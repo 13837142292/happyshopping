@@ -64,8 +64,8 @@ export function getserchList(){
   return  axios.get("classifySort/serchList")
 }
 //获取排序列表
-export function getsortList(con){
-  return  axios.get("classifySort/sortList?serchcon="+con)
+export function getsortList(con,title){
+  return  axios.get("classifySort/sortList?serchcon="+con+"&title="+title)
 }
 
 
