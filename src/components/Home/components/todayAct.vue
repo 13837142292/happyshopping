@@ -1,6 +1,6 @@
 <template>
     <div class="list">
-        <ul ref="myul">
+        <ul ref="myul" @click="tiao">
             <li v-for="(item,index) in myTcart" :key="index" ref="myli" >
                 <img v-lazy="item.img">
                 <p class="des">{{item.title}}</p>
@@ -41,6 +41,11 @@ export default {
              this.$refs.myul.style.width=(this.myTcart.length * liWidth+5)+"px";
          })
         
+    },
+    methods:{
+        tiao(){
+            this.$router.replace('/detail-one/decripe')
+        }
     }
     
 }

@@ -1,7 +1,8 @@
 <template>
   <div class="top">
-    <div class="searchs">
+    <div class="searchs" @click="tiao">
     <input type="text" placeholder="请输入您要搜索的内容" />
+   
     <img src="../img/搜索.png" alt />
 
     </div>
@@ -53,3 +54,12 @@ img {
   transform: translateY(-25%)
 }
 </style>
+<script>
+export default {
+  methods:{
+    tiao(){
+      this.$router.replace('/indexsearch')
+    }
+  }
+}
+</script>
