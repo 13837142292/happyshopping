@@ -6,11 +6,16 @@ import axios from "axios"
 axios.defaults.baseURL="http://127.0.0.1:3000/"
 
 //数据拦截
-axios.interceptors.response.use(function (response){
-    return response.data;
-},function(error){
-  return Promise.reject(error);
-})
+axios.interceptors.response.use(
+  config => {
+    if (localStorage.getItem('Authorization')) {
+      config.headers.Authorization = localStorage.getItem('Authorization');
+    }
+    return config;
+  },
+  error => {
+    return Promise.reject(error);
+  })
 
 //获取banner图
 export function getshoppingCart(){
@@ -22,6 +27,10 @@ export function getshoppingCart(){
 export function getleftList(){
   return axios.get("classifySort/leftList")
 }
+//获取账号密码
+// export function logon(){
+//   return axios.get("users/users")
+// }
 
 
 
