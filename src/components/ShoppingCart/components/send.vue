@@ -2,7 +2,7 @@
     <div class="send">
        <ul>
            <li v-for="(item,index) in sendList" :key="index">
-               <img :src="item" alt="">
+               <img v-lazy="item" alt="">
            </li>
        </ul>
     </div>

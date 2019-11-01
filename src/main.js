@@ -12,7 +12,7 @@ import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: '../dist/error.png',
-  loaded: '../dist/error.png',
+  loading:require('./dist/error.png') ,
   attempt: 1
 })
 Vue.use(VueAwesomeSwiper)

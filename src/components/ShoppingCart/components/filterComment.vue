@@ -3,7 +3,7 @@
     <ul>
              <li v-for="(item,index) in picComment" :key="index">
                      <div class="left">
-                          <img :src="item.img" alt="">
+                          <img v-lazy="item.img" alt="">
                      </div>
                      <div class="right">
                        <p>
@@ -11,7 +11,7 @@
                            <span>{{item.date}}</span>
                        </p>
                        <p>{{item.content}}</p>
-                      <p> <img :src="item.pic" alt=""></p>
+                      <p> <img v-lazy="item.pic" alt=""></p>
                      </div>
                  </li>
      </ul>

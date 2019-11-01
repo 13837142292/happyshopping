@@ -33,7 +33,7 @@
               
                 </div>
                
-                  <img @click="jump(item.id)" :src="item.img" alt="">
+                  <img @click="jump(item.id)" v-lazy="item.img" alt="">
                
                 <div class="right">
                 <p>{{item.detail}}</p>

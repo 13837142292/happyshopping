@@ -4,7 +4,7 @@
         <div class="pp">
             <ul>
             <li v-for="(item,index) in productList" :key="index">
-             <img :src="item.img" alt="">
+             <img v-lazy="item.img" alt="">
              <p>{{item.title}}</p>
              <span>￥{{item.price}}</span>
             </li>

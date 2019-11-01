@@ -8,7 +8,7 @@
             <li v-for="(item,index) in cartList" :key="index">
             <div class="con">
                 <div class="left">
-                     <img :src="item.img" alt="">
+                     <img v-lazy="item.img" alt="">
                 </div>
                 <div class="right">
                 <i><img @click="hiden()" class="delete" src="../images/delete.png" alt=""></i>

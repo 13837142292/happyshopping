@@ -2,7 +2,7 @@
     <div class="decripe">
       <ul>
           <li v-for="(item,index) in decripeList" :key="index">
-              <img :src="item" alt="">
+              <img v-lazy="item" alt="">
           </li>
       </ul>
        
