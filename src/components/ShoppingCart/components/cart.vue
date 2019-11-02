@@ -107,11 +107,11 @@ export default {
             num:0
         }
     },
-    computed(){
-              window.console.log(this.allTotal);
+    // computed(){
+    //           window.console.log(this.allTotal);
 
 
-    },
+    // },
    async created(){
         this.productList=await getshoppingCart();
         //遍历数组，然后为其添加一个是否选中属性，这个属性也可以写到后台，

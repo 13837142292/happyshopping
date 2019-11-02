@@ -29,8 +29,8 @@ import set from "../components/My/components/set.vue"
 import mypay from "../components/My/components/mypay.vue"
 import myLike from "../components/My/components/mylike.vue"
 // dsaiojdfopasjdopas
-import userTop from "../components/My/components/user-top.vue"
-import login from "../components/My/components/login.vue"
+// import userTop from "../components/users/components/user-top.vue"
+// import login from "../components/users/components/login.vue"
 
 Vue.use(VueRouter)
 
