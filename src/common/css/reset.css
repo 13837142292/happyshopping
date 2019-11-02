@@ -17,6 +17,7 @@ body{
 input[type="submit"], input[type="reset"], input[type="button"], input {
   resize: none;
   border: none;
+  outline: none;
 }
 
 /* 取消链接高亮  */

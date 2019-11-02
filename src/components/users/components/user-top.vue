@@ -2,18 +2,16 @@
     <div class="box">
         <!-- top -->
         <div class="top">
-            <img src="../images/jt.png" alt="返回">
+            <a href="#/home"><img src="../images/jt.png" alt="返回"></a>
             <ul class="top-text">
                 <li class="user-db">
                     <a href="javascript:void(0);" @click="CachangeOne"  :class="{ch:id==1}">账号登录</a>
-                    
                 </li>
                 <li class="user-db">
                   
                    <a href="javascript:void(0);" @click="CachangeTwo"  :class="{ch:id==2}">
                         无密码快速登录
                     </a>
-                   
                 </li>
             </ul>
         </div>
@@ -62,7 +60,6 @@ export default {
             display:inline-block;
             padding-left: 50px;
             padding-top: 10px;
-            // color: #000;
             font-size: 16px;
             
         }

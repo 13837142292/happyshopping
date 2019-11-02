@@ -26,7 +26,7 @@ export default {
          this.TcartList= await getTodayList();
          this.$nextTick(()=>{
              var liWidth = this.$refs.myli[0].offsetWidth;
-             window.console.log(liWidth);
+            //  window.console.log(liWidth);
              this.$refs.myul.style.width=(this.TcartList.length * liWidth+1)+"px";
          })
         

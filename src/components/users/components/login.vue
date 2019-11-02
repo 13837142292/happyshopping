@@ -4,7 +4,7 @@
         <!-- top -->
         <div class="top">
             注册
-             <a href="" class="im"><img src="../images/jt.png" alt="返回"></a>
+             <a href="#/userTop" class="im"><img src="../images/jt.png" alt="返回"></a>
         </div>
         <!-- 图形验证码 -->
 <div class="user-box">

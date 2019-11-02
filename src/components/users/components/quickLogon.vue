@@ -13,7 +13,7 @@
         </div>
         <button>登录</button>
         <div class="user-db" style="border-bottom:none" >
-            <a href="javascript:void(0);">新用户注册</a>
+            <a href="javascript:void(0);"  @click="toLogin">新用户注册</a>
             <a class="right" href="javascript:void(0);">忘记密码?</a>
         </div>
         <div class="orDiv">
@@ -30,6 +30,9 @@ export default {
         }
     },
     methods:{
+         toLogin() {
+        this.$router.push("/login")
+    },
         changeImg(){
             this.id=!this.id;
             // imgChange(this.id);

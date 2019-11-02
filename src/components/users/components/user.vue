@@ -10,7 +10,7 @@
       <img class="yzm" :src="yanjing" alt @click="changeImg" />
     </div>
     <div class="user-db">
-      <img src="../images/yzm.png" alt />
+      <img class="yzmImg" src="../images/yzm.png" alt="">
       <input ref="yzm" type="text" placeholder="请输入验证码" />
       <img src="yanjing" alt />
     </div>
@@ -161,4 +161,7 @@ button {
   font-size: 16px;
   margin: 0 auto;
 }
+// .yzmImg{
+//   width:30px;
+// }
 </style>
