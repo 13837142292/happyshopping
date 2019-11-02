@@ -18,8 +18,7 @@
         <span></span>
       </div>
     </div>
-    <!-- 弹出框 -->
-    <model ref="mymodel"></model>
+
     <div class="con wrapper">
       <ul>
         <li v-for="(item,index) in sortList" :key="index">
@@ -35,6 +34,8 @@
         </li>
       </ul>
     </div>
+    <!-- 弹出框 -->
+    <model ref="mymodel" @more="getson"></model>
   </div>
 </template>
 <script>
@@ -50,11 +51,13 @@ export default {
       isShow: false,
       isshow: false,
       show: true,
-      titleList: ["综合", "销售", "新品"],
-      title: "",
+      titleList: ["综合", "销量", "新品"],
+      title: "综合",
       cruli: null,
       myli: [],
-      // sel: false
+      min: null,
+      max: null,
+      click: false
     };
   },
   created() {
@@ -62,6 +65,10 @@ export default {
     this.title = "综合";
   },
   methods: {
+   async getson(tit){
+       window.console.log("触发事件",tit);
+      this.sortList = await getsortList(this.con,tit);
+    },
     getParams() {
       const routerParams = this.$route.query.serchcon;
       this.con = routerParams;
@@ -93,10 +100,9 @@ export default {
     },
     select() {
       this.$refs.mymodel.show();
-      // this.sel = true;
     }
   },
-  async mounted() {
+  async mounted() {  
     this.sortList = await getsortList(this.con, this.title);
     this.$nextTick(() => {
       //使用bscroll
@@ -167,9 +173,11 @@ export default {
     ul {
       display: flex;
       flex-wrap: wrap;
+      min-height: 100%;
       background: #f0f0f0;
       li {
         width: 180px;
+        height:270px ;
         margin-left: 5px;
         margin-bottom: 5px;
         background: #fff;

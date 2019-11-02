@@ -11,7 +11,7 @@ router.get('/shoppingCart', function(req, res, next) {
             img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_main_275250_360.jpg",
             detail:"韩国进口Hanskin韩斯清精华粉底霜BB霜11g*3盒",
             size:"规格：默认",
-            price:"399",
+            price:399,
             number:1
         },
         {
@@ -19,7 +19,7 @@ router.get('/shoppingCart', function(req, res, next) {
             img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/469/252969/1_main_252969_360.jpg",
             detail:"章砚铁铺铁锅（30cm炒锅含锅盖+24cm煎锅+24cm汤锅含锅盖 送锅铲+刀具三件套+和天下铁壶）",
             size:"规格：默认",
-            price:"499",
+            price:499,
             number:1
         },
         {
@@ -27,15 +27,15 @@ router.get('/shoppingCart', function(req, res, next) {
             img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/456/285456/1_main_1_360.jpg",
             detail:"萨佐简约时尚羊毛双面尼大衣",
             size:"规格：绿色 165 ",
-            price:"498",
+            price:498,
             number:1
         },
         {
             id:4,
-            img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/487/287987/1_main_287987_360.jpg",
-            detail:"宏惠舌尖上的汽锅蒸锅升级款",
+            img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/419/296419/1_main_296419_360.jpg",
+            detail:"梵西FONCE 双滚轮v型美颈霜120g",
             size:"规格：默认",
-            price:"599",
+            price:79,
             number:1
         }
 
@@ -89,7 +89,6 @@ router.get('/detailComment', function(req, res, next) {
             name:"春天****YY",
             date:"2019-09-19",
             content:"很好用，是原装进口的，谢谢快乐购。",
-            pic:""
 
         },
         {
@@ -105,7 +104,6 @@ router.get('/detailComment', function(req, res, next) {
             name:"WX******784",
             date:"2019-10-26",
             content:"默认好评",
-            pic:""
 
         },
         {
@@ -126,6 +124,29 @@ router.get('/detailComment', function(req, res, next) {
         }
     ]
     res.send(arr);
+});
+
+//有图评价
+router.get('/picComment', function(req, res, next) {
+  var arr = [
+      {
+          img:"https://ecimg.happigo.com/data/upload/member/avatar/a59/m59123.jpg",
+          name:"WEB****33F",
+          date:"2019-08-26",
+          content:"送朋友的 朋友说很好 质地细腻 遮瑕效果不错 有光泽 比之前的兰芝气垫好用 谢谢快乐购",
+          pic:"https://ecimg.happigo.com/data/upload/product/comments/201908/26/193729/5182785/ac45cccdab6724defda6eaa46d4ab56e_200_200.png"
+
+      },
+      {
+          img:"https://ecimg.happigo.com/data/upload/member/avatar/a13/m13458.jpg",
+          name:"AP******496",
+          date:"2019-09-27",
+          content:"韩国进口Hanskin韩斯清精华粉底霜BB霜，好用，我用完，会再购买。",
+          pic:"https://ecimg.happigo.com/data/upload/product/comments/201909/27/4044844/5208358/68e1ddae39c649e11cd43a2ec35ca050_200_200.jpg"
+
+      }
+  ]
+  res.send(arr);
 });
 
 //猜你喜欢部分的商品信息
@@ -184,5 +205,74 @@ router.get('/likeProduct', function(req, res, next) {
     ]
     res.send(arr);
 });
+
+//商品详情
+router.get('/decripe', function(req, res, next) {
+  var arr = [
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_01_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_02_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_03_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_04_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_05_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_06_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_desc_275250_07_1280.jpg",
+                "http://ecimg.happigo.com/data/upload/shop/ggf-bottom.png"
+  ]
+  res.send(arr);
+});
+//产品参数
+router.get('/parameter', function(req, res, next) {
+  var arr = [
+               {
+                 name:"品牌",
+                 con:""
+               },
+               {
+                 name:"货号",
+                 con:"275250"
+               },
+               {
+                  name:"制造公司/原产地",
+                  con:"韩国"
+               },
+               {
+                 name:'使用步骤',
+                 con:"基础护肤后取用适量BB霜均匀涂抹于脸部、颈部肌肤。"
+               }
+  ]
+  res.send(arr);
+});
+
+//配送与售后
+router.get('/send', function(req, res, next) {
+  var arr = [
+                "http://ecimg.happigo.com/data/upload/shop/common/cs/kefu_01.png",
+                "http://ecimg.happigo.com/data/upload/shop/common/cs/peisong_01.png",
+                "http://ecimg.happigo.com/data/upload/shop/common/cs/fahuo_01.png",
+                "http://ecimg.happigo.com/data/upload/shop/common/cs/tuihuo_01.png",
+                "http://ecimg.happigo.com/data/upload/shop/common/cs/fapiao_01.png",
+                "http://ecimg.happigo.com/data/upload/shop/common/cs/jiage_01.png",
+                "http://ecimg.happigo.com/data/upload/shop/ggf-bottom.png"
+               
+  ]
+  res.send(arr);
+});
+
+
+//详情页加入购物车
+router.get('/cart', function(req, res, next) {
+  var arr = [
+               {
+                 img:"https://ecimg.happigo.com/data/upload/shop/store/goods/1/250/275250/1_main_275250_1280.jpg",
+                 introduce:"韩国进口Hanskin韩斯清精华粉底霜BB霜11g*3盒",
+                 price:399,
+                 number:1,
+                 discount:16
+               }
+               
+  ]
+  res.send(arr);
+});
+
 
 module.exports = router;

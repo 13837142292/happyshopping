@@ -7,7 +7,7 @@ let result={};
 router.post('/login',(req,res) => {
 // 读取文件
  //2.1 从本地读取数据
- fs.readFile('../users.txt','utf-8',function(err,data){
+ fs.readFile('users.txt','utf-8',function(err,data){
   let arr;
   if(!err){
       arr=JSON.parse(data);//将本地数据转换为数组对象

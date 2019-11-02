@@ -1,11 +1,11 @@
 <template>
-    <div class="all">
+    <div class="all" ref="tit">
         <!-- 头部轮播图 -->
-        <div>
+        <div ref="banner">
               <banner></banner>
         </div>
         <!-- 商品信息和评价 -->
-        <div class="introduce" v-for="(item,index) in shoppingNews" :key="index">
+        <div class="introduce" ref="introduce" v-for="(item,index) in shoppingNews" :key="index">
             <div class="top">
               <p>{{item.introduce}}</p>
               <span>{{item.compontent}}</span>
@@ -59,14 +59,14 @@
             <!-- 用户评价 -->
             <div class="talk">
                 <div class="title">
-             <p>用户评价(10)</p>
+             <p>用户评价(6)</p>
              <span><i>100%</i>好评</span>
                 </div>
              
              <ul>
                  <li v-for="(item,index) in commentList" :key="index">
                      <div class="left">
-                          <img :src="item.img" alt="">
+                          <img v-lazy="item.img" alt="">
                      </div>
                      <div class="right">
                        <p>
@@ -74,12 +74,12 @@
                            <span>{{item.date}}</span>
                        </p>
                        <p>{{item.content}}</p>
-                      <p> <img :src="item.pic" alt=""></p>
+                      <p> <img v-lazy="item.pic" alt=""></p>
                      </div>
                  </li>
              </ul>
                <div class="look">
-               <p>查看更多评价 </p>  
+               <p  @click="lookCon">查看更多评价 </p>  
                 <img src="../images/double.png" alt="">  
                 </div>
             </div> 
@@ -92,8 +92,43 @@
 
         </div>
       <!-- 猜你喜欢 -->
-      <likeProduct></likeProduct>
+      <likeProduct ref="like"></likeProduct>
+        <div class="gray" ref="gray">
+
+        </div>
+
+        <!-- 商品详情 -->
+        <div class="bottom" ref="bot">
+            <div class="tit" :class="{fixed:isFixed}">
+          <router-link    tag="li" to="/detail-one/decripe" ><p >商品详情</p></router-link> 
+          <router-link   tag="li" to="/detail-one/parameter"><p >产品参数</p></router-link>
+          <router-link  tag="li" to="/detail-one/send"><p>配送与售后</p></router-link>
+            </div>
+         
+           <router-view></router-view>
+        </div>
+       
+         <!-- 底部 -->
+         <div class="last">
+           <router-link tag="li" to="/home">
+           <i class="iconfont icon-tianchongxing-"></i>
+               首页
+           </router-link>
+           <router-link tag="li" to="/classifySort">
+           <i class="iconfont icon-fenlei"></i>
+               分类
+           </router-link>
+           <button @click="showOrhiden">加入购物车</button>
+           <button class="buy">立即购买</button>
+         </div>
+
+         <div class="model">
+             <model ref="model"></model>
+         </div>
+      
     </div>
+
+    
 </template>
 
 <script>
@@ -101,17 +136,21 @@ import banner from "./banner.vue"
 import {getShoppingNews} from "@/api"
 import {getComment}  from "@/api"
 import likeProduct from "./likeList.vue"
+import model from "./model.vue"
 
 export default {
     components:{
         banner,
-        likeProduct
+        likeProduct,
+        model
+        
     },
     data(){
         return{
            queryInfo:[],
            shoppingNews:[],
-           commentList:[]
+           commentList:[],
+           isFixed:false
         }
     },
   async  created(){
@@ -119,21 +158,52 @@ export default {
     
     this.shoppingNews=await getShoppingNews();
     this.commentList=await getComment();
-      
 
+    
+    // window.console.log(arr);
     },
     methods:{
       getParams(){
           const routerParams=this.$route.query.queryid
           this.queryInfo=routerParams;
+      },
+      //是否显示遮罩层
+      showOrhiden(){
+          window.console.log(this.$refs.model.show())
+      },
+      //查看更多评价
+      lookCon(){
+         this.$router.replace("/comment");
+    
+      },
+      height(){
+      var a=document.body.scrollTop||window.pageYOffset||document.documentElement.scrollTop;
+    //   window.console.log(a);
+      if(a>1320){
+          this.isFixed=true;
+      }else{
+          this.isFixed=false;
       }
+      }
+     
 },
 watch:{
     "$route":"getParams"
+},
+mounted(){
+    window.addEventListener("scroll",this.height)
+    
+ 
 }
 }
 </script>
 <style lang="less" scoped>
+.fixed{
+    position: fixed;
+    left: 0;
+    top:0;
+    background: white;
+}
 .all{
     width: 100%;
     height: calc(100%-51px);
@@ -415,8 +485,78 @@ watch:{
         }
 }
 
+.bottom{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    .tit{
+        width: 100%;
+        height: 42px;
+        border-bottom: 1px solid #e0e0e0;
+         li{ 
+        width: calc(100%/3);
+        height: 100%;  
+        display: flex;
+        justify-content: space-around; 
+        float: left;
+        font-size: 16px;
+        color: #969696;
+        line-height: 42px;
+    }
+    .router-link-active{
+    color: #1e1e1e;
+    p{
+        border-bottom:2px solid #C4223C;
+    }
+}
+    }
+   
 
+    
 }
 
-
+}
+ 
+ .last{
+     width: 100%;
+     height: 50px;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     background: white;
+     z-index: 999;
+     li {
+         width: 60px;
+         height: 50px;
+         float: left;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         flex: 1;
+         border-right: 1px solid #eeebeb;
+         border-top: 1px solid #eeebeb;
+         box-sizing: border-box;
+         i{
+             font-size: 22px;
+          }
+      }
+      button{
+          width: 127px;
+          height: auto;
+          line-height: 50px;
+          font-size: 14px;
+          color: white;
+          background: #DF2946;
+          border: none;
+          font-size: 16px;
+      }
+      .buy{
+          background: #C31F3A;
+          border-left: 1px solid #b4a5a5;
+      }
+ }
 </style>

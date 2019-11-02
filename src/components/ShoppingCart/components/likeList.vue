@@ -4,7 +4,7 @@
         <div class="pp">
             <ul>
             <li v-for="(item,index) in productList" :key="index">
-             <img :src="item.img" alt="">
+             <img v-lazy="item.img" alt="">
              <p>{{item.title}}</p>
              <span>￥{{item.price}}</span>
             </li>
@@ -49,7 +49,7 @@ export default {
           display: flex;
           li{
             width:130px;
-            height: 230px;
+            height: 200px;
             display: inline-block;
             padding-top: 20px;
             padding-bottom: 10px;

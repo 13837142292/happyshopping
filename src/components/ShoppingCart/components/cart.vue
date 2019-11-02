@@ -10,8 +10,7 @@
             <div class="top">
                 <!-- 全选 -->
                 <div class="select" @click="selectAll">
-                <img ref="pic1"   class="all-one"  src="../images/before.png" alt="">   
-                <img    class="all-two" v-if="isShow"  src="../images/after.png" alt="">
+                <div :class="isShow?'inactive':'noactive'"></div>
                 </div>
                
                  <img class="home" src="../images/house.png" alt="">
@@ -29,13 +28,12 @@
                 <div class="left">
                     <!-- 每一个商品 -->
                 <div  class="every" @click="selectOne(index)">
-               <img  class="every-one" src="../images/before.png" alt="">
-               <img  :class="{active:currentIndex==index}" class="every-two" src="../images/after.png" alt="">
+                <div :class="item.isShow?'inactive':'noactive'"></div>
                 </div>
               
                 </div>
                
-                  <img @click="jump(item.id)" :src="item.img" alt="">
+                  <img @click="jump(item.id)" v-lazy="item.img" alt="">
                
                 <div class="right">
                 <p>{{item.detail}}</p>
@@ -43,9 +41,9 @@
                 <div class="pri">
                    <p>￥{{item.price}}</p>
                    <div class="num">
-                     <p @click="sub">-</p>
+                     <p @click="sub(index)">-</p>
                      <p>{{item.number}}</p>
-                     <p @click="add">+</p>
+                     <p @click="add(index)">+</p>
                    </div>
                    
                 </div>
@@ -67,23 +65,23 @@
         </ul>
 <!-- 结算 -->
      <div class="allPrice">
-        <div class="choose">
-            <img src="../images/before.png" alt="">
-            <img v-if="isShow" src="../images/after.png" alt="">
+
+        <div class="choose" @click="selectAll">
+              <div :class="isShow?'inactive':'noactive'"></div>
         </div>
         <p>全选</p>
         <!-- 编辑时显示 -->
         <div class="edit">
            <div class="price">
-            <p>合计：￥{{calTotal()}}</p>
+            <p>合计：￥{{allTotal}}</p>
             <p>不含运费/税费</p>
         </div>
-        <button>结算({{4}})</button>
+        <button>结算({{num}})</button>
         </div>
         <!-- 完成时显示 -->
        <div class="finish" v-if="finish">
          <button class="one">删除缺货</button>
-         <button class="two">删除</button>
+         <button class="two" @click="del()">删除</button>
        </div>
      </div>
 
@@ -96,7 +94,7 @@
 
 <script>
 import {getshoppingCart}  from "@/api"
-import {mapState,mapActions} from "vuex"
+// import {mapState,mapActions} from "vuex"
 export default {
    data(){
         return{
@@ -104,49 +102,117 @@ export default {
             isShow:false,
             currentIndex:null,
             finish:false,
-            every:false
-            
+            every:false,
+            allTotal:0,
+            num:0
         }
     },
-    computed:{
-           ...mapState([
-             'count'
-        ])
-        
+    computed(){
+              window.console.log(this.allTotal);
+
+
     },
    async created(){
         this.productList=await getshoppingCart();
+        //遍历数组，然后为其添加一个是否选中属性，这个属性也可以写到后台，
+        //vue只能监听到一层，所以为其添加的响应式属性无法监听到，可以用set方法
+        this.productList.forEach((item)=> {
+            // item.isShow = false;
+            this.$set(item, 'isShow', false)
+        })
     },
     methods:{
-          ...mapActions([
-             'add',
-             'sub'
-        ]),
+        add(index) {
+            // this.currentIndex=index;
+            this.productList.forEach((item)=>{
+                //如果当前位置等于item的id-1
+              if(index==item.id-1){
+                  return  item.number++
+                    }
+            })
+       
+        },
+        sub(index){
+                this.productList.forEach((item)=>{
+                    if(index==item.id-1&&item.number>1){
+                           return  item.number--
+                    }
+               
+            })  
+            
+          
+
+        },
         //全选
         selectAll(){
-        this.isShow=!this.isShow;
-        if(this.isShow==true){
-            this.$refs.tit.innerHTML='您已享受满129元包邮优惠, ';
-            this.$refs.tit2.innerHTML="再逛逛"
-        }else{
-             this.$refs.tit.innerHTML='您差129元，即可免运费,';
-             this.$refs.tit2.innerHTML="去凑单"
-        }
+            this.isShow=!this.isShow;
+            this.productList.forEach((item)=> {
+                item.isShow = this.isShow
+            })
+
+              this.calTotal()
+              this.isChange();
+
+              if(this.isShow==true){
+                this.num=4;
+              }
         
 
         },
         //选择某一个商品
         selectOne(index){
-            this.currentIndex=index;
-          
-            
+            // window.console.log(this.productList[index].isShow)
+            this.productList[index].isShow = !this.productList[index].isShow
+
+            this.isShow = this.productList.every((item)=> {
+                return item.isShow == true;
+            }) 
+        //调用计算总价方法
+         this.calTotal();
+         //调用内容是否改变方法
+         this.isChange();
+           
+
+             //计算有几个被选中
+             this.num=0;
+             this.productList.forEach((item)=>{
+              if(item.isShow==true){  
+                   this.num++;
+                      } 
+                  })
         },
+        //删除
+         del(){
+            this.productList.forEach((item,index)=>{
+                if(item.isShow==true){
+                    // window.console.log(index);
+                    this.productList.splice(index,1);
+                }
+            })
+         },
         // 计算总价
         calTotal(){
-            var total=this.productList.reduce((total,item)=>{
-                return total+=item.price*item.number;
+             this.allTotal=this.productList.reduce((total,item)=>{
+                if(item.isShow==true){
+                       return total+=item.price*item.number;
+                }else{
+          
+                    return total;
+                }
+             
             },0)
-            return total;
+           
+        },
+        //判断内容是否改变
+        isChange(){
+           if(this.allTotal>=129){
+                this.$refs.tit.innerHTML='您已享受满129元包邮优惠, ';
+                this.$refs.tit2.innerHTML="再逛逛"
+            }else{
+                var a=129-this.allTotal;
+                this.$refs.tit.innerHTML='您差'+a+'元，即可免运费,';
+                this.$refs.tit2.innerHTML="去凑单"
+            }
         },
    //编辑
    changeCon(){
@@ -158,29 +224,44 @@ export default {
             this.$refs.con.innerHTML="编辑"
               this.finish=false;
          }
-        // 跳转
-    }, 
+    },  
+    // 跳转
     jump(id){
       // this.$router.replace("/detail");
-      if(id==1){
-         this.$router.push({
+   if(id==1){
+        this.$router.push({
          path:"/detail-one",
-         query:{
-           queryid:id
-         }
+        //  query:{
+        //    queryid:id
+        //  }
        })
-      }
+   }
+        
       
     }
     },
     mounted(){
-     
+
+
+  
     }
    
 }
 </script>
 
 <style lang="less" scoped>
+.noactive {
+    width: 23px;
+    height: 23px;
+    background: url("../images/before.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+.inactive {
+    width: 23px;
+    height: 23px;
+    background: url("../images/after.png") no-repeat center center;
+    background-size: 100% 100%;
+}
 .title{
     padding: 8px 0;
     box-sizing: border-box;
